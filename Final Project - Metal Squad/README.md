@@ -17,3 +17,7 @@ Please follow these instructions to recreate the game.
 - Then load `ryu_reduced_odd.bin` at location 950000 (dec)
 - Go back to Config tab, select `processor.bit` and Program
 - Have fun!
+
+##Reference:
+- See `Ken.gif`, `Ryu.gif` and `ko.png` for actual images
+- See `Final Project Metal Squad/Matlab Code/coe.m` for Matlab code to convert images to `.coe` and `.bin` files
