@@ -19,6 +19,6 @@ Please follow these instructions to recreate the game.
 - Have fun!
 
 ##Reference:
-- See `Ken.gif`, `Ryu.gif` and `ko.png` for actual images
+- See `Ken.gif`, `Ryu.gif`, `logo.png` and `ko.png` for actual images
 - See `Final Project Metal Squad/Matlab Code/coe.m` for Matlab code to convert images to `.coe` and `.bin` files
 - See `https://www.micron.com/~/media/documents/products/data-sheet/dram/mobile-dram/psram/128mb_burst_cr1_5_p26z.pdf` for Nexys3 Celluler Ram Controller
