@@ -1,0 +1,7 @@
+verilog work "ipcore_dir/logo.v"
+verilog work "ipcore_dir/ko.v"
+verilog work "../Demo/VGAcontrol.v"
+verilog work "cellular_ram_controller.v"
+verilog work "../Demo/vga_display.v"
+verilog work "../Demo/Debouncer.v"
+verilog work "../Demo/processor.v"

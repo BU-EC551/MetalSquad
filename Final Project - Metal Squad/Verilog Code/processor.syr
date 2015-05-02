@@ -1,0 +1,2059 @@
+Release 14.2 - xst P.28xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.17 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.22 secs
+ 
+--> Reading design: processor.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "processor.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "processor"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : processor
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "\\ad\eng\users\p\t\ptd\EC551\Final_Project\ipcore_dir\logo.v" into library work
+Parsing module <logo>.
+Analyzing Verilog file "\\ad\eng\users\p\t\ptd\EC551\Final_Project\ipcore_dir\ko.v" into library work
+Parsing module <ko>.
+Analyzing Verilog file "\\ad\eng\users\p\t\ptd\EC551\Demo\VGAcontrol.v" into library work
+Parsing module <vga_controller_640_60>.
+Analyzing Verilog file "\\ad\eng\users\p\t\ptd\EC551\Final_Project\cellular_ram_controller.v" into library work
+Parsing module <cellular_ram_controller>.
+Analyzing Verilog file "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" into library work
+Parsing module <vga_display>.
+WARNING:HDLCompiler:568 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 776: Constant value is truncated to fit in <6> bits.
+Analyzing Verilog file "\\ad\eng\users\p\t\ptd\EC551\Demo\Debouncer.v" into library work
+Parsing module <Debouncer>.
+Analyzing Verilog file "\\ad\eng\users\p\t\ptd\EC551\Demo\processor.v" into library work
+Parsing module <processor>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <processor>.
+
+Elaborating module <vga_display>.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 111: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 112: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 118: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 119: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 122: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 123: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 126: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 127: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 130: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 131: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 134: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 135: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 138: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 139: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 147: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 148: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 151: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 152: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 155: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 156: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 163: Signal <ken_height> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 164: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 167: Signal <ken_height> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 168: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 171: Signal <ken_height> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 172: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 175: Signal <ken_height> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 176: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 179: Signal <ken_height> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 180: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 183: Signal <ken_height> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 184: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 187: Signal <ken_height> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 188: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 195: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 196: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 199: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 200: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 203: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 204: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 207: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 208: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 211: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 212: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 219: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 220: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 223: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 224: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 227: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 228: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 231: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 232: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 235: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 236: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 239: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 240: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 247: Signal <ken_height> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 248: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 251: Signal <ken_height> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 252: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 255: Signal <ken_height> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 256: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 259: Signal <ken_height> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 260: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 263: Signal <ken_height> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 264: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 267: Signal <ken_height> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 268: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 271: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 272: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 279: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 280: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 283: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 284: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 287: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 288: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 295: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 296: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 299: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 300: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 303: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 304: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 307: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 308: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 311: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 312: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 319: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 320: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 323: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 324: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 327: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 328: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 331: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 332: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 335: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 336: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 339: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 340: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 347: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 348: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 351: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 352: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 355: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 356: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 359: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 360: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 363: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 364: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 367: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 368: Signal <location_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 375: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 376: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 381: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 382: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 385: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 386: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 389: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 390: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 393: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 394: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 397: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 398: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 405: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 406: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 409: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 410: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 413: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 414: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 421: Signal <ryu_height> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 422: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 425: Signal <ryu_height> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 426: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 429: Signal <ryu_height> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 430: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 433: Signal <ryu_height> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 434: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 437: Signal <ryu_height> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 438: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 441: Signal <ryu_height> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 442: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 445: Signal <ryu_height> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 446: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 453: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 454: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 457: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 458: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 461: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 462: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 465: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 466: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 469: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 470: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 477: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 478: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 481: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 482: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 485: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 486: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 489: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 490: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 497: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 498: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 501: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 502: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 505: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 506: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 509: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 510: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 513: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 514: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 517: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 518: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 522: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 523: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 530: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 531: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 534: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 535: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 538: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 539: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 546: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 547: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 550: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 551: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 554: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 555: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 558: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 559: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 562: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 563: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 571: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 572: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 575: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 576: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 579: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 580: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 583: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 584: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 587: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 588: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 591: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 592: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 599: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 600: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 603: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 604: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 607: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 608: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 611: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 612: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 615: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 616: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 619: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 620: Signal <location_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:413 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 709: Result of 25-bit expression is truncated to fit in 11-bit target.
+WARNING:HDLCompiler:413 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 714: Result of 25-bit expression is truncated to fit in 11-bit target.
+WARNING:HDLCompiler:413 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 764: Result of 25-bit expression is truncated to fit in 11-bit target.
+WARNING:HDLCompiler:413 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 769: Result of 25-bit expression is truncated to fit in 11-bit target.
+
+Elaborating module <vga_controller_640_60>.
+
+Elaborating module <ko>.
+WARNING:HDLCompiler:1499 - "\\ad\eng\users\p\t\ptd\EC551\Final_Project\ipcore_dir\ko.v" Line 39: Empty module <ko> remains a black box.
+WARNING:HDLCompiler:189 - "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v" Line 971: Size mismatch in connection of port <addra>. Formal port size is 14-bit while actual signal size is 16-bit.
+
+Elaborating module <logo>.
+WARNING:HDLCompiler:1499 - "\\ad\eng\users\p\t\ptd\EC551\Final_Project\ipcore_dir\logo.v" Line 39: Empty module <logo> remains a black box.
+
+Elaborating module <Debouncer>.
+WARNING:HDLCompiler:1127 - "\\ad\eng\users\p\t\ptd\EC551\Demo\processor.v" Line 71: Assignment to right_button_debounced_2 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "\\ad\eng\users\p\t\ptd\EC551\Demo\processor.v" Line 72: Assignment to left_button_debounced_2 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "\\ad\eng\users\p\t\ptd\EC551\Demo\processor.v" Line 73: Assignment to punch_button_debounced_2 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "\\ad\eng\users\p\t\ptd\EC551\Demo\processor.v" Line 74: Assignment to kick_button_debounced_2 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "\\ad\eng\users\p\t\ptd\EC551\Demo\processor.v" Line 75: Assignment to down_button_debounced_2 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "\\ad\eng\users\p\t\ptd\EC551\Demo\processor.v" Line 76: Assignment to up_button_debounced_2 ignored, since the identifier is never used
+
+Elaborating module <cellular_ram_controller>.
+WARNING:HDLCompiler:634 - "\\ad\eng\users\p\t\ptd\EC551\Demo\processor.v" Line 34: Net <rst> does not have a driver.
+WARNING:Xst:2972 - "\\ad\eng\users\p\t\ptd\EC551\Demo\processor.v" line 71. All outputs of instance <debouncer_right_2> of block <Debouncer> are unconnected in block <processor>. Underlying logic will be removed.
+WARNING:Xst:2972 - "\\ad\eng\users\p\t\ptd\EC551\Demo\processor.v" line 72. All outputs of instance <debouncer_left_2> of block <Debouncer> are unconnected in block <processor>. Underlying logic will be removed.
+WARNING:Xst:2972 - "\\ad\eng\users\p\t\ptd\EC551\Demo\processor.v" line 73. All outputs of instance <debouncer_punch_2> of block <Debouncer> are unconnected in block <processor>. Underlying logic will be removed.
+WARNING:Xst:2972 - "\\ad\eng\users\p\t\ptd\EC551\Demo\processor.v" line 74. All outputs of instance <debouncer_kick_2> of block <Debouncer> are unconnected in block <processor>. Underlying logic will be removed.
+WARNING:Xst:2972 - "\\ad\eng\users\p\t\ptd\EC551\Demo\processor.v" line 75. All outputs of instance <debouncer_down_2> of block <Debouncer> are unconnected in block <processor>. Underlying logic will be removed.
+WARNING:Xst:2972 - "\\ad\eng\users\p\t\ptd\EC551\Demo\processor.v" line 76. All outputs of instance <debouncer_up_2> of block <Debouncer> are unconnected in block <processor>. Underlying logic will be removed.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <processor>.
+    Related source file is "\\ad\eng\users\p\t\ptd\EC551\Demo\processor.v".
+WARNING:Xst:647 - Input <clk_seg> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "\\ad\eng\users\p\t\ptd\EC551\Demo\processor.v" line 71: Output port <clean> of the instance <debouncer_right_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\ad\eng\users\p\t\ptd\EC551\Demo\processor.v" line 72: Output port <clean> of the instance <debouncer_left_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\ad\eng\users\p\t\ptd\EC551\Demo\processor.v" line 73: Output port <clean> of the instance <debouncer_punch_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\ad\eng\users\p\t\ptd\EC551\Demo\processor.v" line 74: Output port <clean> of the instance <debouncer_kick_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\ad\eng\users\p\t\ptd\EC551\Demo\processor.v" line 75: Output port <clean> of the instance <debouncer_down_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\ad\eng\users\p\t\ptd\EC551\Demo\processor.v" line 76: Output port <clean> of the instance <debouncer_up_2> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <rst> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Summary:
+	no macro.
+Unit <processor> synthesized.
+
+Synthesizing Unit <vga_display>.
+    Related source file is "\\ad\eng\users\p\t\ptd\EC551\Demo\vga_display.v".
+        ryu_address = 25'b0000011100111111011110000
+        one_0_five = 25'b0000000000000000001101001
+        ken_img_size = 25'b0000000000000011000111101
+        ryu_img_size = 25'b0000000000000011000000101
+        character_y_loc = 25'b0000000000000000011010010
+        character_y_loc_2 = 25'b0000000000000000100111011
+        N = 2
+    Register <G_bar> equivalent to <R_bar> has been removed
+    Found 2-bit register for signal <count>.
+    Found 1-bit register for signal <clk_25Mhz>.
+    Found 24-bit register for signal <count_8Hz>.
+    Found 1-bit register for signal <clk_8Hz>.
+    Found 11-bit register for signal <location_1>.
+    Found 11-bit register for signal <location_2>.
+    Found 6-bit register for signal <state_ken>.
+    Found 8-bit register for signal <ken_height>.
+    Found 6-bit register for signal <state_ryu>.
+    Found 8-bit register for signal <ryu_height>.
+    Found 16-bit register for signal <ryu_special_location>.
+    Found 6-bit register for signal <move_ken>.
+    Found 6-bit register for signal <move_ryu>.
+    Found 10-bit register for signal <health1>.
+    Found 10-bit register for signal <health2>.
+    Found 3-bit register for signal <R_bar>.
+    Found 1-bit register for signal <start>.
+    Found finite state machine <FSM_1> for signal <move_ryu>.
+    -----------------------------------------------------------------------
+    | States             | 11                                             |
+    | Transitions        | 191                                            |
+    | Inputs             | 16                                             |
+    | Outputs            | 10                                             |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | start_INV_130_o (positive)                     |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 000000                                         |
+    | Power Up State     | 000000                                         |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found finite state machine <FSM_0> for signal <move_ken>.
+    -----------------------------------------------------------------------
+    | States             | 11                                             |
+    | Transitions        | 253                                            |
+    | Inputs             | 17                                             |
+    | Outputs            | 11                                             |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | start_INV_130_o (positive)                     |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 000000                                         |
+    | Power Up State     | 000000                                         |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 12-bit subtractor for signal <GND_2_o_GND_2_o_sub_7_OUT> created at line 55.
+    Found 17-bit subtractor for signal <GND_2_o_GND_2_o_sub_11_OUT> created at line 55.
+    Found 12-bit subtractor for signal <GND_2_o_GND_2_o_sub_36_OUT> created at line 111.
+    Found 9-bit subtractor for signal <GND_2_o_GND_2_o_sub_179_OUT> created at line 164.
+    Found 10-bit subtractor for signal <GND_2_o_GND_2_o_sub_181_OUT> created at line 164.
+    Found 25-bit subtractor for signal <GND_2_o_GND_2_o_sub_466_OUT> created at line 260.
+    Found 12-bit subtractor for signal <GND_2_o_GND_2_o_sub_565_OUT> created at line 296.
+    Found 12-bit subtractor for signal <GND_2_o_GND_2_o_sub_578_OUT> created at line 300.
+    Found 12-bit subtractor for signal <GND_2_o_GND_2_o_sub_591_OUT> created at line 304.
+    Found 12-bit subtractor for signal <GND_2_o_GND_2_o_sub_604_OUT> created at line 308.
+    Found 12-bit subtractor for signal <GND_2_o_GND_2_o_sub_790_OUT> created at line 375.
+    Found 27-bit subtractor for signal <n2247> created at line 375.
+    Found 27-bit subtractor for signal <n2257> created at line 381.
+    Found 27-bit subtractor for signal <n2264> created at line 385.
+    Found 27-bit subtractor for signal <n2271> created at line 389.
+    Found 9-bit subtractor for signal <GND_2_o_GND_2_o_sub_927_OUT> created at line 422.
+    Found 10-bit subtractor for signal <GND_2_o_GND_2_o_sub_929_OUT> created at line 422.
+    Found 27-bit subtractor for signal <n2354> created at line 457.
+    Found 27-bit subtractor for signal <n2361> created at line 461.
+    Found 12-bit subtractor for signal <GND_2_o_GND_2_o_sub_1222_OUT> created at line 513.
+    Found 12-bit subtractor for signal <GND_2_o_GND_2_o_sub_1224_OUT> created at line 513.
+    Found 27-bit subtractor for signal <n2422> created at line 517.
+    Found 12-bit subtractor for signal <GND_2_o_GND_2_o_sub_2723_OUT> created at line 714.
+    Found 12-bit subtractor for signal <GND_2_o_GND_2_o_sub_2787_OUT> created at line 769.
+    Found 12-bit subtractor for signal <GND_2_o_GND_2_o_sub_2811_OUT> created at line 777.
+    Found 16-bit subtractor for signal <ryu_special_location[15]_GND_2_o_sub_2814_OUT> created at line 780.
+    Found 11-bit subtractor for signal <location_2[10]_location_1[10]_sub_2838_OUT> created at line 812.
+    Found 10-bit subtractor for signal <health1[9]_GND_2_o_sub_2939_OUT> created at line 922.
+    Found 10-bit subtractor for signal <health1[9]_GND_2_o_sub_2941_OUT> created at line 924.
+    Found 10-bit subtractor for signal <health2[9]_GND_2_o_sub_2952_OUT> created at line 935.
+    Found 10-bit subtractor for signal <health2[9]_GND_2_o_sub_2954_OUT> created at line 937.
+    Found 12-bit subtractor for signal <GND_2_o_GND_2_o_sub_2972_OUT> created at line 969.
+    Found 12-bit subtractor for signal <GND_2_o_GND_2_o_sub_2974_OUT> created at line 969.
+    Found 12-bit subtractor for signal <GND_2_o_GND_2_o_sub_2980_OUT> created at line 973.
+    Found 12-bit subtractor for signal <GND_2_o_GND_2_o_sub_2982_OUT> created at line 973.
+    Found 16-bit adder for signal <GND_2_o_ryu_special_location[15]_add_1_OUT> created at line 54.
+    Found 11-bit adder for signal <n1795> created at line 98.
+    Found 27-bit adder for signal <n2037> created at line 111.
+    Found 27-bit adder for signal <n1400> created at line 111.
+    Found 12-bit adder for signal <n1802> created at line 112.
+    Found 12-bit adder for signal <n1803> created at line 112.
+    Found 27-bit adder for signal <GND_2_o_GND_2_o_add_46_OUT> created at line 118.
+    Found 27-bit adder for signal <n2049> created at line 118.
+    Found 27-bit adder for signal <n1406[26:0]> created at line 118.
+    Found 27-bit adder for signal <n1407> created at line 122.
+    Found 12-bit adder for signal <n1808> created at line 123.
+    Found 27-bit adder for signal <n1409> created at line 126.
+    Found 12-bit adder for signal <n1810> created at line 127.
+    Found 27-bit adder for signal <n1411> created at line 130.
+    Found 12-bit adder for signal <n1812> created at line 131.
+    Found 27-bit adder for signal <n1413> created at line 134.
+    Found 12-bit adder for signal <n1815> created at line 139.
+    Found 27-bit adder for signal <n2066> created at line 147.
+    Found 27-bit adder for signal <n1417[26:0]> created at line 147.
+    Found 12-bit adder for signal <n1826> created at line 148.
+    Found 27-bit adder for signal <n1419> created at line 151.
+    Found 27-bit adder for signal <n2130> created at line 163.
+    Found 27-bit adder for signal <n2077> created at line 163.
+    Found 27-bit adder for signal <n1423[26:0]> created at line 163.
+    Found 27-bit adder for signal <n1426> created at line 167.
+    Found 12-bit adder for signal <n1838> created at line 168.
+    Found 27-bit adder for signal <n1428> created at line 171.
+    Found 12-bit adder for signal <n1840> created at line 172.
+    Found 25-bit adder for signal <GND_2_o_GND_2_o_add_207_OUT> created at line 172.
+    Found 27-bit adder for signal <n1431> created at line 175.
+    Found 12-bit adder for signal <n1844> created at line 176.
+    Found 27-bit adder for signal <n1433> created at line 179.
+    Found 27-bit adder for signal <n1434> created at line 183.
+    Found 27-bit adder for signal <n1435> created at line 187.
+    Found 27-bit adder for signal <GND_2_o_GND_2_o_add_279_OUT> created at line 195.
+    Found 27-bit adder for signal <n1438[26:0]> created at line 195.
+    Found 27-bit adder for signal <n1439> created at line 199.
+    Found 12-bit adder for signal <n1849> created at line 200.
+    Found 27-bit adder for signal <n1441> created at line 203.
+    Found 12-bit adder for signal <n1851> created at line 204.
+    Found 27-bit adder for signal <n1443> created at line 207.
+    Found 27-bit adder for signal <n2108> created at line 219.
+    Found 27-bit adder for signal <n1445> created at line 219.
+    Found 12-bit adder for signal <n1855> created at line 220.
+    Found 27-bit adder for signal <n2115> created at line 223.
+    Found 27-bit adder for signal <n1448> created at line 223.
+    Found 12-bit adder for signal <n1858> created at line 224.
+    Found 27-bit adder for signal <n1450> created at line 227.
+    Found 12-bit adder for signal <n1860> created at line 228.
+    Found 27-bit adder for signal <n1452> created at line 231.
+    Found 27-bit adder for signal <n2128> created at line 235.
+    Found 27-bit adder for signal <n1454> created at line 235.
+    Found 27-bit adder for signal <GND_2_o_GND_2_o_add_414_OUT> created at line 247.
+    Found 27-bit adder for signal <n2135> created at line 247.
+    Found 27-bit adder for signal <n1458> created at line 247.
+    Found 27-bit adder for signal <n2140> created at line 251.
+    Found 27-bit adder for signal <n1460> created at line 251.
+    Found 27-bit adder for signal <n1461> created at line 255.
+    Found 27-bit adder for signal <GND_2_o_GND_2_o_add_456_OUT> created at line 259.
+    Found 27-bit adder for signal <n2149> created at line 259.
+    Found 27-bit adder for signal <n1465> created at line 259.
+    Found 27-bit adder for signal <n2154> created at line 263.
+    Found 27-bit adder for signal <n1468> created at line 263.
+    Found 27-bit adder for signal <n2159> created at line 267.
+    Found 27-bit adder for signal <n1470> created at line 267.
+    Found 27-bit adder for signal <GND_2_o_GND_2_o_add_518_OUT> created at line 279.
+    Found 27-bit adder for signal <n1473> created at line 279.
+    Found 27-bit adder for signal <n2169> created at line 283.
+    Found 27-bit adder for signal <n1475> created at line 283.
+    Found 27-bit adder for signal <n2174> created at line 287.
+    Found 27-bit adder for signal <n1477> created at line 287.
+    Found 27-bit adder for signal <n2193> created at line 303.
+    Found 27-bit adder for signal <n2195> created at line 303.
+    Found 27-bit adder for signal <n1488> created at line 303.
+    Found 27-bit adder for signal <n2207> created at line 311.
+    Found 27-bit adder for signal <n1495> created at line 311.
+    Found 27-bit adder for signal <n2212> created at line 319.
+    Found 27-bit adder for signal <n1497> created at line 319.
+    Found 27-bit adder for signal <n2217> created at line 323.
+    Found 27-bit adder for signal <n1499> created at line 323.
+    Found 27-bit adder for signal <n2222> created at line 327.
+    Found 27-bit adder for signal <n1501> created at line 327.
+    Found 27-bit adder for signal <n2227> created at line 331.
+    Found 27-bit adder for signal <n1503> created at line 331.
+    Found 27-bit adder for signal <n2232> created at line 335.
+    Found 27-bit adder for signal <n1505> created at line 335.
+    Found 27-bit adder for signal <n2237> created at line 355.
+    Found 27-bit adder for signal <n1507> created at line 355.
+    Found 27-bit adder for signal <n2242> created at line 359.
+    Found 27-bit adder for signal <n1509> created at line 359.
+    Found 27-bit adder for signal <n2246> created at line 375.
+    Found 27-bit adder for signal <n2249> created at line 375.
+    Found 27-bit adder for signal <GND_2_o_GND_2_o_add_793_OUT> created at line 375.
+    Found 12-bit adder for signal <n1814> created at line 376.
+    Found 27-bit adder for signal <n2256> created at line 381.
+    Found 27-bit adder for signal <n2259> created at line 381.
+    Found 27-bit adder for signal <GND_2_o_GND_2_o_add_806_OUT> created at line 381.
+    Found 12-bit adder for signal <n1917> created at line 382.
+    Found 27-bit adder for signal <n2266> created at line 385.
+    Found 27-bit adder for signal <GND_2_o_GND_2_o_add_819_OUT> created at line 385.
+    Found 12-bit adder for signal <n1920> created at line 386.
+    Found 27-bit adder for signal <n2273> created at line 389.
+    Found 27-bit adder for signal <GND_2_o_GND_2_o_add_832_OUT> created at line 389.
+    Found 12-bit adder for signal <n1923> created at line 390.
+    Found 12-bit adder for signal <n1926> created at line 394.
+    Found 27-bit adder for signal <n2287> created at line 397.
+    Found 27-bit adder for signal <GND_2_o_GND_2_o_add_858_OUT> created at line 397.
+    Found 27-bit adder for signal <n2292> created at line 405.
+    Found 27-bit adder for signal <GND_2_o_GND_2_o_add_878_OUT> created at line 405.
+    Found 27-bit adder for signal <GND_2_o_GND_2_o_add_916_OUT> created at line 421.
+    Found 27-bit adder for signal <n2308> created at line 421.
+    Found 27-bit adder for signal <n2309> created at line 421.
+    Found 27-bit adder for signal <n2344> created at line 421.
+    Found 27-bit adder for signal <GND_2_o_GND_2_o_add_938_OUT> created at line 425.
+    Found 12-bit adder for signal <n1941> created at line 426.
+    Found 27-bit adder for signal <GND_2_o_GND_2_o_add_954_OUT> created at line 429.
+    Found 12-bit adder for signal <n1944> created at line 430.
+    Found 25-bit adder for signal <GND_2_o_GND_2_o_add_959_OUT> created at line 430.
+    Found 12-bit adder for signal <n1949> created at line 434.
+    Found 27-bit adder for signal <GND_2_o_GND_2_o_add_988_OUT> created at line 437.
+    Found 27-bit adder for signal <GND_2_o_GND_2_o_add_1004_OUT> created at line 441.
+    Found 27-bit adder for signal <GND_2_o_GND_2_o_add_1020_OUT> created at line 445.
+    Found 27-bit adder for signal <GND_2_o_GND_2_o_add_1039_OUT> created at line 453.
+    Found 27-bit adder for signal <n2350> created at line 453.
+    Found 27-bit adder for signal <GND_2_o_GND_2_o_add_1044_OUT> created at line 453.
+    Found 27-bit adder for signal <n2356> created at line 457.
+    Found 27-bit adder for signal <GND_2_o_GND_2_o_add_1057_OUT> created at line 457.
+    Found 12-bit adder for signal <n1954> created at line 458.
+    Found 27-bit adder for signal <n2363> created at line 461.
+    Found 27-bit adder for signal <GND_2_o_GND_2_o_add_1070_OUT> created at line 461.
+    Found 12-bit adder for signal <n1957> created at line 462.
+    Found 27-bit adder for signal <n2370> created at line 465.
+    Found 27-bit adder for signal <GND_2_o_GND_2_o_add_1083_OUT> created at line 465.
+    Found 27-bit adder for signal <GND_2_o_GND_2_o_add_1110_OUT> created at line 477.
+    Found 27-bit adder for signal <n2376> created at line 477.
+    Found 27-bit adder for signal <GND_2_o_GND_2_o_add_1115_OUT> created at line 477.
+    Found 12-bit adder for signal <n1961> created at line 482.
+    Found 27-bit adder for signal <n2389> created at line 485.
+    Found 27-bit adder for signal <GND_2_o_GND_2_o_add_1141_OUT> created at line 485.
+    Found 27-bit adder for signal <n2393> created at line 497.
+    Found 27-bit adder for signal <GND_2_o_GND_2_o_add_1172_OUT> created at line 497.
+    Found 12-bit adder for signal <n1967> created at line 502.
+    Found 12-bit adder for signal <n1970> created at line 506.
+    Found 12-bit adder for signal <n1973> created at line 510.
+    Found 27-bit adder for signal <n2425> created at line 517.
+    Found 27-bit adder for signal <GND_2_o_GND_2_o_add_1242_OUT> created at line 517.
+    Found 12-bit adder for signal <n1983> created at line 518.
+    Found 27-bit adder for signal <GND_2_o_GND_2_o_add_1275_OUT> created at line 530.
+    Found 27-bit adder for signal <n2433> created at line 530.
+    Found 27-bit adder for signal <GND_2_o_GND_2_o_add_1280_OUT> created at line 530.
+    Found 27-bit adder for signal <n2439> created at line 534.
+    Found 27-bit adder for signal <GND_2_o_GND_2_o_add_1293_OUT> created at line 534.
+    Found 27-bit adder for signal <n2444> created at line 538.
+    Found 27-bit adder for signal <GND_2_o_GND_2_o_add_1306_OUT> created at line 538.
+    Found 12-bit adder for signal <n1989> created at line 547.
+    Found 27-bit adder for signal <n2456> created at line 550.
+    Found 27-bit adder for signal <GND_2_o_GND_2_o_add_1338_OUT> created at line 550.
+    Found 27-bit adder for signal <n2461> created at line 554.
+    Found 27-bit adder for signal <GND_2_o_GND_2_o_add_1351_OUT> created at line 554.
+    Found 27-bit adder for signal <n2466> created at line 558.
+    Found 27-bit adder for signal <GND_2_o_GND_2_o_add_1364_OUT> created at line 558.
+    Found 12-bit adder for signal <n1994> created at line 563.
+    Found 27-bit adder for signal <n2478> created at line 571.
+    Found 27-bit adder for signal <GND_2_o_GND_2_o_add_1397_OUT> created at line 571.
+    Found 27-bit adder for signal <n2483> created at line 575.
+    Found 27-bit adder for signal <GND_2_o_GND_2_o_add_1409_OUT> created at line 575.
+    Found 27-bit adder for signal <n2488> created at line 579.
+    Found 27-bit adder for signal <GND_2_o_GND_2_o_add_1421_OUT> created at line 579.
+    Found 27-bit adder for signal <n2493> created at line 583.
+    Found 27-bit adder for signal <GND_2_o_GND_2_o_add_1433_OUT> created at line 583.
+    Found 27-bit adder for signal <n2498> created at line 587.
+    Found 27-bit adder for signal <GND_2_o_GND_2_o_add_1445_OUT> created at line 587.
+    Found 27-bit adder for signal <n2503> created at line 607.
+    Found 27-bit adder for signal <GND_2_o_GND_2_o_add_1501_OUT> created at line 607.
+    Found 27-bit adder for signal <n2508> created at line 611.
+    Found 27-bit adder for signal <GND_2_o_GND_2_o_add_1513_OUT> created at line 611.
+    Found 2-bit adder for signal <count[1]_GND_2_o_add_2663_OUT> created at line 634.
+    Found 24-bit adder for signal <count_8Hz[23]_GND_2_o_add_2666_OUT> created at line 642.
+    Found 6-bit adder for signal <state_ken[5]_GND_2_o_add_2670_OUT> created at line 658.
+    Found 12-bit adder for signal <n2519[11:0]> created at line 709.
+    Found 6-bit adder for signal <state_ryu[5]_GND_2_o_add_2743_OUT> created at line 722.
+    Found 12-bit adder for signal <n2523[11:0]> created at line 764.
+    Found 16-bit adder for signal <pixel_ko_addr> created at line 969.
+    Found 16-bit adder for signal <pixel_logo_addr> created at line 973.
+    Found 27-bit adder for signal <GND_2_o_GND_2_o_add_8_OUT> created at line 55.
+    Found 27-bit subtractor for signal <_n2674> created at line 501.
+    Found 27-bit adder for signal <GND_2_o_GND_2_o_add_1186_OUT> created at line 501.
+    Found 27-bit subtractor for signal <_n2700> created at line 546.
+    Found 27-bit adder for signal <GND_2_o_GND_2_o_add_1325_OUT> created at line 546.
+    Found 27-bit subtractor for signal <_n2702> created at line 505.
+    Found 27-bit adder for signal <GND_2_o_GND_2_o_add_1200_OUT> created at line 505.
+    Found 27-bit adder for signal <_n2788> created at line 295.
+    Found 27-bit adder for signal <n1480> created at line 295.
+    Found 27-bit subtractor for signal <_n2868> created at line 425.
+    Found 27-bit adder for signal <n2316> created at line 425.
+    Found 27-bit subtractor for signal <_n2870> created at line 429.
+    Found 27-bit adder for signal <n2325> created at line 429.
+    Found 27-bit subtractor for signal <_n2872> created at line 433.
+    Found 27-bit adder for signal <GND_2_o_GND_2_o_add_971_OUT> created at line 433.
+    Found 27-bit adder for signal <_n2874> created at line 299.
+    Found 27-bit adder for signal <n1484> created at line 299.
+    Found 27-bit adder for signal <_n2876> created at line 307.
+    Found 27-bit adder for signal <n1492> created at line 307.
+    Found 27-bit subtractor for signal <_n2878> created at line 55.
+    Found 27-bit adder for signal <ryu_special_addr> created at line 55.
+    Found 27-bit subtractor for signal <_n2930> created at line 562.
+    Found 27-bit adder for signal <GND_2_o_GND_2_o_add_1377_OUT> created at line 562.
+    Found 27-bit subtractor for signal <_n2932> created at line 514.
+    Found 27-bit adder for signal <GND_2_o_GND_2_o_add_1233_OUT> created at line 514.
+    Found 27-bit subtractor for signal <_n2984> created at line 509.
+    Found 27-bit adder for signal <GND_2_o_GND_2_o_add_1214_OUT> created at line 509.
+    Found 11-bit subtractor for signal <GND_2_o_GND_2_o_add_19_OUT> created at line 97.
+    Found 27-bit subtractor for signal <_n3085> created at line 393.
+    Found 27-bit adder for signal <GND_2_o_GND_2_o_add_845_OUT> created at line 393.
+    Found 27-bit subtractor for signal <_n3087> created at line 481.
+    Found 27-bit adder for signal <GND_2_o_GND_2_o_add_1128_OUT> created at line 481.
+    Found 27-bit adder for signal <_n3113> created at line 409.
+    Found 27-bit adder for signal <GND_2_o_GND_2_o_add_891_OUT> created at line 409.
+    Found 27x11-bit multiplier for signal <n1388> created at line 55.
+    Found 27x11-bit multiplier for signal <n1396> created at line 111.
+    Found 6x6-bit multiplier for signal <state_ken[5]_PWR_2_o_MuLt_37_OUT> created at line 111.
+    Found 27x11-bit multiplier for signal <n1404> created at line 118.
+    Found 27x11-bit multiplier for signal <n1421> created at line 163.
+    Found 27x11-bit multiplier for signal <n1437> created at line 195.
+    Found 27x11-bit multiplier for signal <n1456> created at line 247.
+    Found 27x11-bit multiplier for signal <n1463> created at line 259.
+    Found 27x11-bit multiplier for signal <n1472> created at line 279.
+    Found 27x11-bit multiplier for signal <n1511> created at line 375.
+    Found 6x6-bit multiplier for signal <state_ryu[5]_PWR_2_o_MuLt_792_OUT> created at line 375.
+    Found 27x11-bit multiplier for signal <n1519> created at line 381.
+    Found 27x11-bit multiplier for signal <n1546> created at line 421.
+    Found 27x11-bit multiplier for signal <n1573> created at line 453.
+    Found 27x11-bit multiplier for signal <n1588> created at line 477.
+    Found 27x11-bit multiplier for signal <n1624> created at line 530.
+    Found 16x8-bit multiplier for signal <n1771> created at line 969.
+    Found 16x9-bit multiplier for signal <n1774> created at line 973.
+    Found 1-bit 13-to-1 multiplexer for signal <move_ryu[5]_GND_2_o_Select_2544_o> created at line 373.
+    Found 1-bit 11-to-1 multiplexer for signal <_n2634> created at line 109.
+    Found 1-bit 7-to-1 multiplexer for signal <_n2646> created at line 379.
+    Found 1-bit 11-to-1 multiplexer for signal <_n2670> created at line 109.
+    Found 1-bit 11-to-1 multiplexer for signal <_n2697> created at line 109.
+    Found 1-bit 11-to-1 multiplexer for signal <_n2725> created at line 109.
+    Found 1-bit 7-to-1 multiplexer for signal <_n2737> created at line 379.
+    Found 1-bit 11-to-1 multiplexer for signal <_n2761> created at line 109.
+    Found 1-bit 13-to-1 multiplexer for signal <move_ryu[5]_GND_2_o_Select_2323_o> created at line 373.
+    Found 1-bit 11-to-1 multiplexer for signal <_n2811> created at line 109.
+    Found 1-bit 5-to-1 multiplexer for signal <_n2827> created at line 116.
+    Found 1-bit 5-to-1 multiplexer for signal <_n2841> created at line 116.
+    Found 1-bit 7-to-1 multiplexer for signal <_n2865> created at line 161.
+    Found 1-bit 5-to-1 multiplexer for signal <_n2891> created at line 116.
+    Found 1-bit 5-to-1 multiplexer for signal <_n2905> created at line 116.
+    Found 1-bit 5-to-1 multiplexer for signal <_n2919> created at line 116.
+    Found 1-bit 7-to-1 multiplexer for signal <_n2945> created at line 379.
+    Found 1-bit 7-to-1 multiplexer for signal <_n2957> created at line 379.
+    Found 1-bit 11-to-1 multiplexer for signal <_n2981> created at line 109.
+    Found 1-bit 5-to-1 multiplexer for signal <_n2997> created at line 116.
+    Found 1-bit 13-to-1 multiplexer for signal <move_ryu[5]_GND_2_o_Select_2493_o> created at line 373.
+    Found 1-bit 7-to-1 multiplexer for signal <_n3034> created at line 379.
+    Found 1-bit 11-to-1 multiplexer for signal <_n3058> created at line 109.
+    Found 1-bit 7-to-1 multiplexer for signal <_n3124> created at line 379.
+    Found 1-bit 5-to-1 multiplexer for signal <_n3162> created at line 116.
+    Found 1-bit 6-to-1 multiplexer for signal <_n3176> created at line 217.
+    Found 1-bit 6-to-1 multiplexer for signal <_n3191> created at line 317.
+    Found 1-bit 6-to-1 multiplexer for signal <_n3205> created at line 345.
+    Found 1-bit 5-to-1 multiplexer for signal <_n3219> created at line 116.
+    Found 1-bit 6-to-1 multiplexer for signal <_n3233> created at line 217.
+    Found 1-bit 6-to-1 multiplexer for signal <_n3247> created at line 317.
+    Found 1-bit 6-to-1 multiplexer for signal <_n3261> created at line 345.
+    Found 1-bit 5-to-1 multiplexer for signal <_n3275> created at line 116.
+    Found 1-bit 6-to-1 multiplexer for signal <_n3289> created at line 217.
+    Found 1-bit 6-to-1 multiplexer for signal <_n3303> created at line 317.
+    Found 1-bit 6-to-1 multiplexer for signal <_n3317> created at line 345.
+    Found 1-bit 5-to-1 multiplexer for signal <_n3331> created at line 116.
+    Found 1-bit 6-to-1 multiplexer for signal <_n3345> created at line 217.
+    Found 1-bit 6-to-1 multiplexer for signal <_n3359> created at line 317.
+    Found 1-bit 6-to-1 multiplexer for signal <_n3373> created at line 345.
+    Found 1-bit 5-to-1 multiplexer for signal <_n3387> created at line 116.
+    Found 1-bit 6-to-1 multiplexer for signal <_n3401> created at line 217.
+    Found 1-bit 6-to-1 multiplexer for signal <_n3415> created at line 317.
+    Found 1-bit 6-to-1 multiplexer for signal <_n3429> created at line 345.
+    Found 1-bit 6-to-1 multiplexer for signal <_n3443> created at line 217.
+    Found 1-bit 6-to-1 multiplexer for signal <_n3457> created at line 317.
+    Found 1-bit 6-to-1 multiplexer for signal <_n3471> created at line 345.
+    Found 1-bit 5-to-1 multiplexer for signal <_n3485> created at line 116.
+    Found 1-bit 6-to-1 multiplexer for signal <_n3499> created at line 217.
+    Found 1-bit 6-to-1 multiplexer for signal <_n3513> created at line 317.
+    Found 1-bit 6-to-1 multiplexer for signal <_n3527> created at line 345.
+    Found 1-bit 6-to-1 multiplexer for signal <_n3541> created at line 217.
+    Found 1-bit 6-to-1 multiplexer for signal <_n3555> created at line 317.
+    Found 1-bit 6-to-1 multiplexer for signal <_n3569> created at line 345.
+    Found 1-bit 5-to-1 multiplexer for signal <_n3583> created at line 116.
+    Found 1-bit 6-to-1 multiplexer for signal <_n3597> created at line 217.
+    Found 1-bit 6-to-1 multiplexer for signal <_n3611> created at line 317.
+    Found 1-bit 6-to-1 multiplexer for signal <_n3625> created at line 345.
+    Found 1-bit 5-to-1 multiplexer for signal <_n3639> created at line 116.
+    Found 1-bit 6-to-1 multiplexer for signal <_n3653> created at line 217.
+    Found 1-bit 6-to-1 multiplexer for signal <_n3667> created at line 317.
+    Found 1-bit 6-to-1 multiplexer for signal <_n3681> created at line 345.
+    Found 1-bit 5-to-1 multiplexer for signal <_n3695> created at line 116.
+    Found 1-bit 6-to-1 multiplexer for signal <_n3709> created at line 217.
+    Found 1-bit 6-to-1 multiplexer for signal <_n3723> created at line 317.
+    Found 1-bit 6-to-1 multiplexer for signal <_n3737> created at line 345.
+    Found 1-bit 6-to-1 multiplexer for signal <_n3751> created at line 217.
+    Found 1-bit 6-to-1 multiplexer for signal <_n3765> created at line 317.
+    Found 1-bit 6-to-1 multiplexer for signal <_n3779> created at line 345.
+    Found 1-bit 6-to-1 multiplexer for signal <_n3793> created at line 217.
+    Found 1-bit 6-to-1 multiplexer for signal <_n3807> created at line 317.
+    Found 1-bit 6-to-1 multiplexer for signal <_n3821> created at line 345.
+    Found 1-bit 5-to-1 multiplexer for signal <_n3835> created at line 116.
+    Found 1-bit 6-to-1 multiplexer for signal <_n3849> created at line 217.
+    Found 1-bit 6-to-1 multiplexer for signal <_n3863> created at line 317.
+    Found 1-bit 6-to-1 multiplexer for signal <_n3877> created at line 345.
+    Found 1-bit 5-to-1 multiplexer for signal <_n3891> created at line 116.
+    Found 1-bit 6-to-1 multiplexer for signal <_n3905> created at line 217.
+    Found 1-bit 6-to-1 multiplexer for signal <_n3919> created at line 317.
+    Found 1-bit 6-to-1 multiplexer for signal <_n3933> created at line 345.
+    Found 1-bit 5-to-1 multiplexer for signal <_n3947> created at line 116.
+    Found 1-bit 6-to-1 multiplexer for signal <_n3961> created at line 217.
+    Found 1-bit 6-to-1 multiplexer for signal <_n3975> created at line 317.
+    Found 1-bit 6-to-1 multiplexer for signal <_n3989> created at line 345.
+    Found 1-bit 6-to-1 multiplexer for signal <_n4003> created at line 217.
+    Found 1-bit 6-to-1 multiplexer for signal <_n4017> created at line 317.
+    Found 1-bit 6-to-1 multiplexer for signal <_n4031> created at line 345.
+    Found 1-bit 5-to-1 multiplexer for signal <_n4045> created at line 116.
+    Found 1-bit 6-to-1 multiplexer for signal <_n4059> created at line 217.
+    Found 1-bit 6-to-1 multiplexer for signal <_n4073> created at line 317.
+    Found 1-bit 6-to-1 multiplexer for signal <_n4087> created at line 345.
+    Found 1-bit 5-to-1 multiplexer for signal <_n4101> created at line 116.
+    Found 1-bit 6-to-1 multiplexer for signal <_n4115> created at line 217.
+    Found 1-bit 6-to-1 multiplexer for signal <_n4129> created at line 317.
+    Found 1-bit 6-to-1 multiplexer for signal <_n4143> created at line 345.
+    Found 1-bit 5-to-1 multiplexer for signal <_n4157> created at line 116.
+    Found 1-bit 6-to-1 multiplexer for signal <_n4171> created at line 217.
+    Found 1-bit 6-to-1 multiplexer for signal <_n4185> created at line 317.
+    Found 1-bit 6-to-1 multiplexer for signal <_n4199> created at line 345.
+    Found 1-bit 5-to-1 multiplexer for signal <_n4213> created at line 116.
+    Found 1-bit 6-to-1 multiplexer for signal <_n4227> created at line 217.
+    Found 1-bit 6-to-1 multiplexer for signal <_n4241> created at line 317.
+    Found 1-bit 6-to-1 multiplexer for signal <_n4255> created at line 345.
+    Found 1-bit 6-to-1 multiplexer for signal <_n4269> created at line 217.
+    Found 1-bit 6-to-1 multiplexer for signal <_n4283> created at line 317.
+    Found 1-bit 6-to-1 multiplexer for signal <_n4297> created at line 345.
+    Found 1-bit 5-to-1 multiplexer for signal <_n4311> created at line 116.
+    Found 1-bit 6-to-1 multiplexer for signal <_n4325> created at line 217.
+    Found 1-bit 6-to-1 multiplexer for signal <_n4339> created at line 317.
+    Found 1-bit 6-to-1 multiplexer for signal <_n4353> created at line 345.
+    Found 1-bit 5-to-1 multiplexer for signal <_n4367> created at line 116.
+    Found 1-bit 6-to-1 multiplexer for signal <_n4381> created at line 217.
+    Found 1-bit 6-to-1 multiplexer for signal <_n4395> created at line 317.
+    Found 1-bit 6-to-1 multiplexer for signal <_n4409> created at line 345.
+    Found 1-bit 5-to-1 multiplexer for signal <_n4423> created at line 116.
+    Found 1-bit 6-to-1 multiplexer for signal <_n4437> created at line 217.
+    Found 1-bit 6-to-1 multiplexer for signal <_n4451> created at line 317.
+    Found 1-bit 6-to-1 multiplexer for signal <_n4465> created at line 345.
+    Found 1-bit 5-to-1 multiplexer for signal <_n4479> created at line 116.
+    Found 1-bit 6-to-1 multiplexer for signal <_n4493> created at line 217.
+    Found 1-bit 6-to-1 multiplexer for signal <_n4507> created at line 317.
+    Found 1-bit 6-to-1 multiplexer for signal <_n4521> created at line 345.
+    Found 1-bit 3-to-1 multiplexer for signal <_n4604> created at line 277.
+    Found 1-bit 3-to-1 multiplexer for signal <_n4620> created at line 277.
+    Found 1-bit 3-to-1 multiplexer for signal <_n4636> created at line 277.
+    Found 1-bit 3-to-1 multiplexer for signal <_n4652> created at line 277.
+    Found 1-bit 3-to-1 multiplexer for signal <_n4668> created at line 277.
+    Found 1-bit 3-to-1 multiplexer for signal <_n4676> created at line 277.
+    Found 1-bit 3-to-1 multiplexer for signal <_n4692> created at line 277.
+    Found 1-bit 3-to-1 multiplexer for signal <_n4700> created at line 277.
+    Found 1-bit 3-to-1 multiplexer for signal <_n4716> created at line 277.
+    Found 1-bit 3-to-1 multiplexer for signal <_n4732> created at line 277.
+    Found 1-bit 3-to-1 multiplexer for signal <_n4748> created at line 277.
+    Found 1-bit 3-to-1 multiplexer for signal <_n4764> created at line 277.
+    Found 1-bit 3-to-1 multiplexer for signal <_n4780> created at line 277.
+    Found 1-bit 3-to-1 multiplexer for signal <_n4796> created at line 277.
+    Found 1-bit 3-to-1 multiplexer for signal <_n4812> created at line 277.
+    Found 1-bit 3-to-1 multiplexer for signal <_n4828> created at line 277.
+    Found 1-bit 3-to-1 multiplexer for signal <_n4844> created at line 277.
+    Found 1-bit 3-to-1 multiplexer for signal <_n4860> created at line 277.
+    Found 1-bit 3-to-1 multiplexer for signal <_n4876> created at line 277.
+    Found 1-bit 3-to-1 multiplexer for signal <_n4892> created at line 277.
+    Found 1-bit 3-to-1 multiplexer for signal <_n4908> created at line 277.
+    Found 1-bit 3-to-1 multiplexer for signal <_n4924> created at line 277.
+    Found 1-bit 3-to-1 multiplexer for signal <_n4940> created at line 277.
+    Found 1-bit 3-to-1 multiplexer for signal <_n4956> created at line 277.
+    Found 1-bit 3-to-1 multiplexer for signal <_n4972> created at line 277.
+    Found 1-bit 3-to-1 multiplexer for signal <_n4988> created at line 277.
+    Found 1-bit 7-to-1 multiplexer for signal <_n5012> created at line 161.
+    Found 1-bit 7-to-1 multiplexer for signal <_n5029> created at line 245.
+    Found 1-bit 7-to-1 multiplexer for signal <_n5045> created at line 161.
+    Found 1-bit 7-to-1 multiplexer for signal <_n5061> created at line 245.
+    Found 1-bit 7-to-1 multiplexer for signal <_n5077> created at line 161.
+    Found 1-bit 7-to-1 multiplexer for signal <_n5093> created at line 245.
+    Found 1-bit 7-to-1 multiplexer for signal <_n5109> created at line 161.
+    Found 1-bit 7-to-1 multiplexer for signal <_n5125> created at line 245.
+    Found 1-bit 7-to-1 multiplexer for signal <_n5141> created at line 161.
+    Found 1-bit 7-to-1 multiplexer for signal <_n5157> created at line 245.
+    Found 1-bit 7-to-1 multiplexer for signal <_n5173> created at line 245.
+    Found 1-bit 7-to-1 multiplexer for signal <_n5189> created at line 161.
+    Found 1-bit 7-to-1 multiplexer for signal <_n5205> created at line 245.
+    Found 1-bit 7-to-1 multiplexer for signal <_n5221> created at line 161.
+    Found 1-bit 7-to-1 multiplexer for signal <_n5237> created at line 245.
+    Found 1-bit 7-to-1 multiplexer for signal <_n5253> created at line 161.
+    Found 1-bit 7-to-1 multiplexer for signal <_n5269> created at line 245.
+    Found 1-bit 7-to-1 multiplexer for signal <_n5285> created at line 161.
+    Found 1-bit 7-to-1 multiplexer for signal <_n5301> created at line 245.
+    Found 1-bit 7-to-1 multiplexer for signal <_n5317> created at line 161.
+    Found 1-bit 7-to-1 multiplexer for signal <_n5333> created at line 245.
+    Found 1-bit 7-to-1 multiplexer for signal <_n5349> created at line 161.
+    Found 1-bit 7-to-1 multiplexer for signal <_n5365> created at line 245.
+    Found 1-bit 7-to-1 multiplexer for signal <_n5381> created at line 161.
+    Found 1-bit 7-to-1 multiplexer for signal <_n5397> created at line 245.
+    Found 1-bit 7-to-1 multiplexer for signal <_n5413> created at line 161.
+    Found 1-bit 7-to-1 multiplexer for signal <_n5429> created at line 245.
+    Found 1-bit 7-to-1 multiplexer for signal <_n5445> created at line 161.
+    Found 1-bit 7-to-1 multiplexer for signal <_n5461> created at line 245.
+    Found 1-bit 7-to-1 multiplexer for signal <_n5477> created at line 161.
+    Found 1-bit 7-to-1 multiplexer for signal <_n5493> created at line 245.
+    Found 1-bit 7-to-1 multiplexer for signal <_n5509> created at line 161.
+    Found 1-bit 7-to-1 multiplexer for signal <_n5525> created at line 245.
+    Found 1-bit 7-to-1 multiplexer for signal <_n5541> created at line 161.
+    Found 1-bit 7-to-1 multiplexer for signal <_n5557> created at line 245.
+    Found 1-bit 7-to-1 multiplexer for signal <_n5573> created at line 161.
+    Found 1-bit 7-to-1 multiplexer for signal <_n5589> created at line 245.
+    Found 1-bit 7-to-1 multiplexer for signal <_n5605> created at line 161.
+    Found 1-bit 7-to-1 multiplexer for signal <_n5621> created at line 245.
+    Found 1-bit 7-to-1 multiplexer for signal <_n5637> created at line 161.
+    Found 1-bit 7-to-1 multiplexer for signal <_n5653> created at line 245.
+    Found 1-bit 7-to-1 multiplexer for signal <_n5669> created at line 161.
+    Found 1-bit 7-to-1 multiplexer for signal <_n5685> created at line 245.
+    Found 1-bit 7-to-1 multiplexer for signal <_n5701> created at line 161.
+    Found 1-bit 7-to-1 multiplexer for signal <_n5717> created at line 245.
+    Found 1-bit 7-to-1 multiplexer for signal <_n5733> created at line 161.
+    Found 1-bit 7-to-1 multiplexer for signal <_n5749> created at line 245.
+    Found 1-bit 7-to-1 multiplexer for signal <_n5765> created at line 161.
+    Found 1-bit 7-to-1 multiplexer for signal <_n5781> created at line 245.
+    Found 1-bit 7-to-1 multiplexer for signal <_n5797> created at line 161.
+    Found 1-bit 7-to-1 multiplexer for signal <_n5813> created at line 245.
+    Found 1-bit 7-to-1 multiplexer for signal <_n5829> created at line 161.
+    Found 1-bit 7-to-1 multiplexer for signal <_n5845> created at line 245.
+    Found 1-bit 5-to-1 multiplexer for signal <_n5870> created at line 293.
+    Found 1-bit 5-to-1 multiplexer for signal <_n5894> created at line 293.
+    Found 1-bit 5-to-1 multiplexer for signal <_n5918> created at line 293.
+    Found 1-bit 5-to-1 multiplexer for signal <_n5942> created at line 293.
+    Found 1-bit 5-to-1 multiplexer for signal <_n5966> created at line 293.
+    Found 1-bit 5-to-1 multiplexer for signal <_n5990> created at line 293.
+    Found 1-bit 5-to-1 multiplexer for signal <_n6014> created at line 293.
+    Found 1-bit 5-to-1 multiplexer for signal <_n6038> created at line 293.
+    Found 1-bit 5-to-1 multiplexer for signal <_n6062> created at line 293.
+    Found 1-bit 5-to-1 multiplexer for signal <_n6086> created at line 293.
+    Found 1-bit 5-to-1 multiplexer for signal <_n6110> created at line 293.
+    Found 1-bit 5-to-1 multiplexer for signal <_n6134> created at line 293.
+    Found 1-bit 5-to-1 multiplexer for signal <_n6158> created at line 293.
+    Found 1-bit 5-to-1 multiplexer for signal <_n6182> created at line 293.
+    Found 1-bit 5-to-1 multiplexer for signal <_n6206> created at line 293.
+    Found 1-bit 5-to-1 multiplexer for signal <_n6230> created at line 293.
+    Found 1-bit 5-to-1 multiplexer for signal <_n6254> created at line 293.
+    Found 1-bit 5-to-1 multiplexer for signal <_n6278> created at line 293.
+    Found 1-bit 5-to-1 multiplexer for signal <_n6302> created at line 293.
+    Found 1-bit 5-to-1 multiplexer for signal <_n6326> created at line 293.
+    Found 1-bit 5-to-1 multiplexer for signal <_n6350> created at line 293.
+    Found 1-bit 5-to-1 multiplexer for signal <_n6374> created at line 293.
+    Found 1-bit 5-to-1 multiplexer for signal <_n6398> created at line 293.
+    Found 1-bit 5-to-1 multiplexer for signal <_n6422> created at line 293.
+    Found 1-bit 5-to-1 multiplexer for signal <_n6446> created at line 293.
+    Found 1-bit 5-to-1 multiplexer for signal <_n6470> created at line 293.
+    Found 1-bit 11-to-1 multiplexer for signal <_n6579> created at line 109.
+    Found 1-bit 11-to-1 multiplexer for signal <_n6603> created at line 109.
+    Found 1-bit 11-to-1 multiplexer for signal <_n6627> created at line 109.
+    Found 1-bit 11-to-1 multiplexer for signal <_n6651> created at line 109.
+    Found 1-bit 11-to-1 multiplexer for signal <_n6675> created at line 109.
+    Found 1-bit 11-to-1 multiplexer for signal <_n6699> created at line 109.
+    Found 1-bit 11-to-1 multiplexer for signal <_n6723> created at line 109.
+    Found 1-bit 11-to-1 multiplexer for signal <_n6747> created at line 109.
+    Found 1-bit 11-to-1 multiplexer for signal <_n6771> created at line 109.
+    Found 1-bit 11-to-1 multiplexer for signal <_n6795> created at line 109.
+    Found 1-bit 11-to-1 multiplexer for signal <_n6819> created at line 109.
+    Found 1-bit 11-to-1 multiplexer for signal <_n6843> created at line 109.
+    Found 1-bit 11-to-1 multiplexer for signal <_n6867> created at line 109.
+    Found 1-bit 11-to-1 multiplexer for signal <_n6891> created at line 109.
+    Found 1-bit 11-to-1 multiplexer for signal <_n6915> created at line 109.
+    Found 1-bit 11-to-1 multiplexer for signal <_n6939> created at line 109.
+    Found 1-bit 11-to-1 multiplexer for signal <_n6963> created at line 109.
+    Found 1-bit 11-to-1 multiplexer for signal <_n6987> created at line 109.
+    Found 1-bit 11-to-1 multiplexer for signal <_n7011> created at line 109.
+    Found 1-bit 13-to-1 multiplexer for signal <move_ryu[5]_GND_2_o_Select_2425_o> created at line 373.
+    Found 1-bit 13-to-1 multiplexer for signal <move_ryu[5]_GND_2_o_Select_2476_o> created at line 373.
+    Found 1-bit 13-to-1 multiplexer for signal <move_ryu[5]_GND_2_o_Select_2289_o> created at line 373.
+    Found 1-bit 7-to-1 multiplexer for signal <_n7119> created at line 379.
+    Found 1-bit 13-to-1 multiplexer for signal <move_ryu[5]_GND_2_o_Select_2221_o> created at line 373.
+    Found 1-bit 7-to-1 multiplexer for signal <_n7179> created at line 379.
+    Found 1-bit 7-to-1 multiplexer for signal <_n7192> created at line 379.
+    Found 1-bit 7-to-1 multiplexer for signal <_n7204> created at line 379.
+    Found 1-bit 7-to-1 multiplexer for signal <_n7216> created at line 379.
+    Found 1-bit 7-to-1 multiplexer for signal <_n7228> created at line 379.
+    Found 1-bit 7-to-1 multiplexer for signal <_n7240> created at line 379.
+    Found 1-bit 7-to-1 multiplexer for signal <_n7252> created at line 379.
+    Found 1-bit 7-to-1 multiplexer for signal <_n7264> created at line 379.
+    Found 1-bit 7-to-1 multiplexer for signal <_n7276> created at line 379.
+    Found 1-bit 7-to-1 multiplexer for signal <_n7288> created at line 379.
+    Found 1-bit 7-to-1 multiplexer for signal <_n7300> created at line 379.
+    Found 1-bit 7-to-1 multiplexer for signal <_n7312> created at line 379.
+    Found 1-bit 7-to-1 multiplexer for signal <_n7324> created at line 379.
+    Found 1-bit 7-to-1 multiplexer for signal <_n7336> created at line 379.
+    Found 1-bit 7-to-1 multiplexer for signal <_n7348> created at line 379.
+    Found 1-bit 7-to-1 multiplexer for signal <_n7360> created at line 379.
+    Found 1-bit 7-to-1 multiplexer for signal <_n7372> created at line 379.
+    Found 1-bit 7-to-1 multiplexer for signal <_n7384> created at line 379.
+    Found 1-bit 7-to-1 multiplexer for signal <_n7396> created at line 379.
+    Found 1-bit 7-to-1 multiplexer for signal <_n7408> created at line 379.
+    Found 1-bit 7-to-1 multiplexer for signal <_n7420> created at line 379.
+    Found 1-bit 7-to-1 multiplexer for signal <_n7433> created at line 451.
+    Found 1-bit 7-to-1 multiplexer for signal <_n7445> created at line 544.
+    Found 1-bit 3-to-1 multiplexer for signal <_n7456> created at line 528.
+    Found 1-bit 8-to-1 multiplexer for signal <_n7473> created at line 419.
+    Found 1-bit 4-to-1 multiplexer for signal <_n7485> created at line 475.
+    Found 1-bit 7-to-1 multiplexer for signal <_n7501> created at line 495.
+    Found 1-bit 13-to-1 multiplexer for signal <move_ryu[5]_GND_2_o_Select_2642_o> created at line 373.
+    Found 27-bit 4-to-1 multiplexer for signal <_n7624> created at line 403.
+    Found 27-bit 8-to-1 multiplexer for signal <_n7640> created at line 419.
+    Found 27-bit 7-to-1 multiplexer for signal <_n7652> created at line 451.
+    Found 27-bit 4-to-1 multiplexer for signal <_n7662> created at line 475.
+    Found 27-bit 7-to-1 multiplexer for signal <_n7676> created at line 495.
+    Found 27-bit 4-to-1 multiplexer for signal <_n7684> created at line 528.
+    Found 27-bit 7-to-1 multiplexer for signal <_n7696> created at line 544.
+    Found 27-bit 7-to-1 multiplexer for signal <_n7710> created at line 569.
+    Found 27-bit 7-to-1 multiplexer for signal <_n7724> created at line 597.
+    Found 1-bit 13-to-1 multiplexer for signal <move_ryu[5]_GND_2_o_Select_2187_o> created at line 373.
+    Found 1-bit 13-to-1 multiplexer for signal <move_ryu[5]_GND_2_o_Select_2204_o> created at line 373.
+    Found 1-bit 13-to-1 multiplexer for signal <move_ryu[5]_GND_2_o_Select_2238_o> created at line 373.
+    Found 1-bit 13-to-1 multiplexer for signal <move_ryu[5]_GND_2_o_Select_2255_o> created at line 373.
+    Found 1-bit 13-to-1 multiplexer for signal <move_ryu[5]_GND_2_o_Select_2272_o> created at line 373.
+    Found 1-bit 13-to-1 multiplexer for signal <move_ryu[5]_GND_2_o_Select_2306_o> created at line 373.
+    Found 1-bit 13-to-1 multiplexer for signal <move_ryu[5]_GND_2_o_Select_2340_o> created at line 373.
+    Found 1-bit 13-to-1 multiplexer for signal <move_ryu[5]_GND_2_o_Select_2357_o> created at line 373.
+    Found 1-bit 13-to-1 multiplexer for signal <move_ryu[5]_GND_2_o_Select_2374_o> created at line 373.
+    Found 1-bit 13-to-1 multiplexer for signal <move_ryu[5]_GND_2_o_Select_2391_o> created at line 373.
+    Found 1-bit 13-to-1 multiplexer for signal <move_ryu[5]_GND_2_o_Select_2408_o> created at line 373.
+    Found 1-bit 13-to-1 multiplexer for signal <move_ryu[5]_GND_2_o_Select_2442_o> created at line 373.
+    Found 1-bit 13-to-1 multiplexer for signal <move_ryu[5]_GND_2_o_Select_2459_o> created at line 373.
+    Found 1-bit 13-to-1 multiplexer for signal <move_ryu[5]_GND_2_o_Select_2510_o> created at line 373.
+    Found 1-bit 13-to-1 multiplexer for signal <move_ryu[5]_GND_2_o_Select_2527_o> created at line 373.
+    Found 1-bit 13-to-1 multiplexer for signal <move_ryu[5]_GND_2_o_Select_2561_o> created at line 373.
+    Found 1-bit 13-to-1 multiplexer for signal <move_ryu[5]_GND_2_o_Select_2578_o> created at line 373.
+    Found 1-bit 13-to-1 multiplexer for signal <move_ryu[5]_GND_2_o_Select_2595_o> created at line 373.
+    Found 1-bit 13-to-1 multiplexer for signal <move_ryu[5]_GND_2_o_Select_2612_o> created at line 373.
+    Found 1-bit 13-to-1 multiplexer for signal <move_ryu[5]_GND_2_o_Select_2629_o> created at line 373.
+WARNING:Xst:737 - Found 1-bit latch for signal <pixel_addr_palyer_1<26>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pixel_addr_palyer_1<25>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pixel_addr_palyer_1<24>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pixel_addr_palyer_1<23>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pixel_addr_palyer_1<22>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pixel_addr_palyer_1<21>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pixel_addr_palyer_1<20>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pixel_addr_palyer_1<19>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pixel_addr_palyer_1<18>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pixel_addr_palyer_1<17>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pixel_addr_palyer_1<16>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pixel_addr_palyer_1<15>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pixel_addr_palyer_1<14>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pixel_addr_palyer_1<13>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pixel_addr_palyer_1<12>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pixel_addr_palyer_1<11>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pixel_addr_palyer_1<10>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pixel_addr_palyer_1<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pixel_addr_palyer_1<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pixel_addr_palyer_1<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pixel_addr_palyer_1<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pixel_addr_palyer_1<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pixel_addr_palyer_1<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pixel_addr_palyer_1<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pixel_addr_palyer_1<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pixel_addr_palyer_1<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <player_1_region>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pixel_addr_palyer_2<26>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pixel_addr_palyer_2<25>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pixel_addr_palyer_2<24>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pixel_addr_palyer_2<23>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pixel_addr_palyer_2<22>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pixel_addr_palyer_2<21>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pixel_addr_palyer_2<20>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pixel_addr_palyer_2<19>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pixel_addr_palyer_2<18>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pixel_addr_palyer_2<17>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pixel_addr_palyer_2<16>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pixel_addr_palyer_2<15>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pixel_addr_palyer_2<14>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pixel_addr_palyer_2<13>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pixel_addr_palyer_2<12>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pixel_addr_palyer_2<11>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pixel_addr_palyer_2<10>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pixel_addr_palyer_2<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pixel_addr_palyer_2<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pixel_addr_palyer_2<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pixel_addr_palyer_2<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pixel_addr_palyer_2<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pixel_addr_palyer_2<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pixel_addr_palyer_2<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pixel_addr_palyer_2<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pixel_addr_palyer_2<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pixel_addr_palyer_2<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <player_2_region>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 16-bit comparator lessequal for signal <n0003> created at line 54
+    Found 16-bit comparator lessequal for signal <n0006> created at line 54
+    Found 11-bit comparator lessequal for signal <n0009> created at line 54
+    Found 11-bit comparator greater for signal <GND_2_o_hcount[10]_LessThan_21_o> created at line 97
+    Found 11-bit comparator lessequal for signal <n0034> created at line 97
+    Found 11-bit comparator lessequal for signal <n0037> created at line 97
+    Found 11-bit comparator lessequal for signal <n0040> created at line 97
+    Found 11-bit comparator lessequal for signal <n0044> created at line 98
+    Found 11-bit comparator lessequal for signal <n0047> created at line 98
+    Found 12-bit comparator lessequal for signal <n0059> created at line 112
+    Found 12-bit comparator greater for signal <BUS_0010_GND_2_o_LessThan_43_o> created at line 112
+    Found 11-bit comparator lessequal for signal <n0069> created at line 119
+    Found 12-bit comparator lessequal for signal <n0075> created at line 123
+    Found 12-bit comparator lessequal for signal <n0081> created at line 127
+    Found 12-bit comparator lessequal for signal <n0087> created at line 131
+    Found 12-bit comparator lessequal for signal <n0092> created at line 139
+    Found 12-bit comparator greater for signal <BUS_0043_GND_2_o_LessThan_119_o> created at line 139
+    Found 12-bit comparator lessequal for signal <n0111> created at line 148
+    Found 11-bit comparator lessequal for signal <n0113> created at line 148
+    Found 11-bit comparator lessequal for signal <n0116> created at line 148
+    Found 25-bit comparator lessequal for signal <n0129> created at line 164
+    Found 25-bit comparator greater for signal <GND_2_o_GND_2_o_LessThan_182_o> created at line 164
+    Found 12-bit comparator lessequal for signal <n0137> created at line 168
+    Found 12-bit comparator lessequal for signal <n0143> created at line 172
+    Found 25-bit comparator lessequal for signal <n0147> created at line 172
+    Found 12-bit comparator lessequal for signal <n0153> created at line 176
+    Found 12-bit comparator lessequal for signal <n0170> created at line 200
+    Found 12-bit comparator lessequal for signal <n0176> created at line 204
+    Found 12-bit comparator lessequal for signal <n0187> created at line 220
+    Found 12-bit comparator lessequal for signal <n0194> created at line 224
+    Found 12-bit comparator lessequal for signal <n0200> created at line 228
+    Found 25-bit comparator lessequal for signal <n0220> created at line 260
+    Found 11-bit comparator lessequal for signal <n0236> created at line 288
+    Found 25-bit comparator lessequal for signal <n0244> created at line 296
+    Found 25-bit comparator lessequal for signal <n0252> created at line 300
+    Found 25-bit comparator lessequal for signal <n0260> created at line 304
+    Found 25-bit comparator lessequal for signal <n0268> created at line 308
+    Found 11-bit comparator lessequal for signal <n0280> created at line 328
+    Found 12-bit comparator greater for signal <GND_2_o_BUS_0239_LessThan_796_o> created at line 376
+    Found 11-bit comparator greater for signal <n0315> created at line 376
+    Found 12-bit comparator greater for signal <GND_2_o_BUS_0244_LessThan_809_o> created at line 382
+    Found 12-bit comparator greater for signal <GND_2_o_BUS_0249_LessThan_822_o> created at line 386
+    Found 12-bit comparator greater for signal <GND_2_o_BUS_0254_LessThan_835_o> created at line 390
+    Found 12-bit comparator greater for signal <GND_2_o_BUS_0259_LessThan_848_o> created at line 394
+    Found 12-bit comparator lessequal for signal <n0361> created at line 406
+    Found 25-bit comparator lessequal for signal <n0378> created at line 422
+    Found 25-bit comparator greater for signal <GND_2_o_GND_2_o_LessThan_930_o> created at line 422
+    Found 12-bit comparator lessequal for signal <n0389> created at line 426
+    Found 12-bit comparator lessequal for signal <n0398> created at line 430
+    Found 25-bit comparator lessequal for signal <n0402> created at line 430
+    Found 12-bit comparator lessequal for signal <n0411> created at line 434
+    Found 12-bit comparator lessequal for signal <n0433> created at line 458
+    Found 12-bit comparator lessequal for signal <n0441> created at line 462
+    Found 12-bit comparator lessequal for signal <n0457> created at line 482
+    Found 12-bit comparator lessequal for signal <n0463> created at line 486
+    Found 12-bit comparator lessequal for signal <n0477> created at line 502
+    Found 12-bit comparator lessequal for signal <n0485> created at line 506
+    Found 12-bit comparator lessequal for signal <n0493> created at line 510
+    Found 25-bit comparator lessequal for signal <n0499> created at line 513
+    Found 12-bit comparator lessequal for signal <n0514> created at line 518
+    Found 12-bit comparator lessequal for signal <n0538> created at line 547
+    Found 12-bit comparator lessequal for signal <n0547> created at line 555
+    Found 12-bit comparator lessequal for signal <n0557> created at line 563
+    Found 6-bit comparator lessequal for signal <n1092> created at line 657
+    Found 6-bit comparator lessequal for signal <n1096> created at line 660
+    Found 6-bit comparator lessequal for signal <n1099> created at line 663
+    Found 6-bit comparator greater for signal <n1102> created at line 666
+    Found 6-bit comparator lessequal for signal <n1107> created at line 682
+    Found 12-bit comparator greater for signal <BUS_0488_GND_2_o_LessThan_2716_o> created at line 709
+    Found 6-bit comparator lessequal for signal <n1118> created at line 710
+    Found 11-bit comparator lessequal for signal <n1121> created at line 714
+    Found 6-bit comparator lessequal for signal <n1130> created at line 721
+    Found 6-bit comparator lessequal for signal <n1134> created at line 724
+    Found 6-bit comparator lessequal for signal <n1137> created at line 727
+    Found 6-bit comparator lessequal for signal <n1140> created at line 730
+    Found 6-bit comparator lessequal for signal <n1145> created at line 746
+    Found 11-bit comparator greater for signal <location_2[10]_GND_2_o_LessThan_2779_o> created at line 764
+    Found 6-bit comparator lessequal for signal <n1153> created at line 765
+    Found 16-bit comparator lessequal for signal <GND_2_o_ryu_special_location[15]_LessThan_2813_o> created at line 779
+    Found 10-bit comparator greater for signal <GND_2_o_health1[9]_LessThan_2936_o> created at line 920
+    Found 10-bit comparator greater for signal <health1[9]_GND_2_o_LessThan_2938_o> created at line 922
+    Found 10-bit comparator greater for signal <GND_2_o_health2[9]_LessThan_2949_o> created at line 933
+    Found 10-bit comparator greater for signal <health2[9]_GND_2_o_LessThan_2951_o> created at line 935
+    Found 11-bit comparator lessequal for signal <n1301> created at line 968
+    Found 11-bit comparator greater for signal <hcount[10]_GND_2_o_LessThan_2968_o> created at line 968
+    Found 11-bit comparator lessequal for signal <n1305> created at line 968
+    Found 11-bit comparator greater for signal <vcount[10]_GND_2_o_LessThan_2970_o> created at line 968
+    Found 11-bit comparator lessequal for signal <n1318> created at line 972
+    Found 11-bit comparator greater for signal <hcount[10]_GND_2_o_LessThan_2977_o> created at line 972
+    Found 11-bit comparator lessequal for signal <n1322> created at line 972
+    Found 11-bit comparator greater for signal <vcount[10]_GND_2_o_LessThan_2979_o> created at line 972
+    WARNING:Xst:2404 -  FFs/Latches <B_bar<1:2>> (without init value) have a constant value of 0 in block <vga_display>.
+    Summary:
+	inferred  18 Multiplier(s).
+	inferred 250 Adder/Subtractor(s).
+	inferred 118 D-type flip-flop(s).
+	inferred  55 Latch(s).
+	inferred  91 Comparator(s).
+	inferred 641 Multiplexer(s).
+	inferred   2 Finite State Machine(s).
+Unit <vga_display> synthesized.
+
+Synthesizing Unit <vga_controller_640_60>.
+    Related source file is "\\ad\eng\users\p\t\ptd\EC551\Demo\VGAcontrol.v".
+        HMAX = 800
+        VMAX = 525
+        HLINES = 640
+        HFP = 648
+        HSP = 744
+        VLINES = 480
+        VFP = 482
+        VSP = 484
+        SPP = 0
+    Found 11-bit register for signal <hcounter>.
+    Found 11-bit register for signal <vcounter>.
+    Found 1-bit register for signal <HS>.
+    Found 1-bit register for signal <VS>.
+    Found 1-bit register for signal <blank>.
+    Found 11-bit adder for signal <hcounter[10]_GND_61_o_add_4_OUT> created at line 28.
+    Found 11-bit adder for signal <vcounter[10]_GND_61_o_add_12_OUT> created at line 36.
+    Found 11-bit comparator lessequal for signal <n0014> created at line 43
+    Found 11-bit comparator greater for signal <hcounter[10]_GND_61_o_LessThan_20_o> created at line 43
+    Found 11-bit comparator lessequal for signal <n0020> created at line 50
+    Found 11-bit comparator greater for signal <vcounter[10]_GND_61_o_LessThan_23_o> created at line 50
+    Found 11-bit comparator greater for signal <hcounter[10]_GND_61_o_LessThan_24_o> created at line 55
+    Found 11-bit comparator greater for signal <vcounter[10]_GND_61_o_LessThan_25_o> created at line 55
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  25 D-type flip-flop(s).
+	inferred   6 Comparator(s).
+Unit <vga_controller_640_60> synthesized.
+
+Synthesizing Unit <Debouncer>.
+    Related source file is "\\ad\eng\users\p\t\ptd\EC551\Demo\Debouncer.v".
+        delay = 300000
+    Found 22-bit register for signal <delay_count>.
+    Found 1-bit register for signal <clean>.
+    Found 22-bit adder for signal <delay_count[21]_GND_66_o_add_5_OUT> created at line 50.
+    Found 22-bit comparator lessequal for signal <n0002> created at line 43
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  23 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   2 Multiplexer(s).
+Unit <Debouncer> synthesized.
+
+Synthesizing Unit <cellular_ram_controller>.
+    Related source file is "\\ad\eng\users\p\t\ptd\EC551\Final_Project\cellular_ram_controller.v".
+WARNING:Xst:647 - Input <DQ> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <WAIT> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <cellular_ram_controller> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 18
+ 16x8-bit multiplier                                   : 1
+ 16x9-bit multiplier                                   : 1
+ 27x11-bit multiplier                                  : 14
+ 6x6-bit multiplier                                    : 2
+# Adders/Subtractors                                   : 259
+ 10-bit subtractor                                     : 4
+ 11-bit adder                                          : 3
+ 11-bit subtractor                                     : 2
+ 12-bit adder                                          : 34
+ 12-bit subtractor                                     : 15
+ 16-bit adder                                          : 3
+ 16-bit subtractor                                     : 1
+ 17-bit subtractor                                     : 1
+ 2-bit adder                                           : 1
+ 22-bit adder                                          : 7
+ 24-bit adder                                          : 1
+ 25-bit adder                                          : 2
+ 25-bit subtractor                                     : 1
+ 27-bit adder                                          : 161
+ 27-bit subtractor                                     : 19
+ 6-bit adder                                           : 2
+ 9-bit subtractor                                      : 2
+# Registers                                            : 34
+ 1-bit register                                        : 13
+ 10-bit register                                       : 2
+ 11-bit register                                       : 4
+ 16-bit register                                       : 1
+ 2-bit register                                        : 1
+ 22-bit register                                       : 7
+ 24-bit register                                       : 1
+ 3-bit register                                        : 1
+ 6-bit register                                        : 2
+ 8-bit register                                        : 2
+# Latches                                              : 55
+ 1-bit latch                                           : 55
+# Comparators                                          : 104
+ 10-bit comparator greater                             : 4
+ 11-bit comparator greater                             : 11
+ 11-bit comparator lessequal                           : 18
+ 12-bit comparator greater                             : 8
+ 12-bit comparator lessequal                           : 29
+ 16-bit comparator lessequal                           : 3
+ 22-bit comparator lessequal                           : 7
+ 25-bit comparator greater                             : 2
+ 25-bit comparator lessequal                           : 10
+ 6-bit comparator greater                              : 1
+ 6-bit comparator lessequal                            : 11
+# Multiplexers                                         : 655
+ 1-bit 11-to-1 multiplexer                             : 27
+ 1-bit 13-to-1 multiplexer                             : 28
+ 1-bit 2-to-1 multiplexer                              : 257
+ 1-bit 3-to-1 multiplexer                              : 27
+ 1-bit 4-to-1 multiplexer                              : 1
+ 1-bit 5-to-1 multiplexer                              : 52
+ 1-bit 6-to-1 multiplexer                              : 78
+ 1-bit 7-to-1 multiplexer                              : 85
+ 1-bit 8-to-1 multiplexer                              : 1
+ 10-bit 2-to-1 multiplexer                             : 4
+ 11-bit 2-to-1 multiplexer                             : 2
+ 2-bit 2-to-1 multiplexer                              : 4
+ 22-bit 2-to-1 multiplexer                             : 14
+ 25-bit 2-to-1 multiplexer                             : 4
+ 26-bit 2-to-1 multiplexer                             : 2
+ 27-bit 2-to-1 multiplexer                             : 12
+ 27-bit 4-to-1 multiplexer                             : 3
+ 27-bit 7-to-1 multiplexer                             : 5
+ 27-bit 8-to-1 multiplexer                             : 1
+ 3-bit 2-to-1 multiplexer                              : 8
+ 6-bit 2-to-1 multiplexer                              : 30
+ 8-bit 2-to-1 multiplexer                              : 10
+# FSMs                                                 : 2
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/ko.ngc>.
+Reading core <ipcore_dir/logo.ngc>.
+Loading core <ko> for timing and area information for instance <ko>.
+Loading core <logo> for timing and area information for instance <logo>.
+INFO:Xst:2261 - The FF/Latch <R_bar_0> in Unit <vga> is equivalent to the following 2 FFs/Latches, which will be removed : <R_bar_1> <R_bar_2> 
+
+Synthesizing (advanced) Unit <vga_controller_640_60>.
+The following registers are absorbed into counter <hcounter>: 1 register on signal <hcounter>.
+The following registers are absorbed into counter <vcounter>: 1 register on signal <vcounter>.
+Unit <vga_controller_640_60> synthesized (advanced).
+
+Synthesizing (advanced) Unit <vga_display>.
+The following registers are absorbed into accumulator <health1>: 1 register on signal <health1>.
+The following registers are absorbed into accumulator <health2>: 1 register on signal <health2>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+The following registers are absorbed into counter <count_8Hz>: 1 register on signal <count_8Hz>.
+The following registers are absorbed into accumulator <ryu_special_location>: 1 register on signal <ryu_special_location>.
+	Multiplier <Mmult_state_ken[5]_PWR_2_o_MuLt_37_OUT> in block <vga_display> and adder/subtractor <Madd_n1400> in block <vga_display> are combined into a MAC<Maddsub_state_ken[5]_PWR_2_o_MuLt_37_OUT>.
+	Multiplier <Mmult_state_ryu[5]_PWR_2_o_MuLt_792_OUT> in block <vga_display> and adder/subtractor <Madd_GND_2_o_GND_2_o_add_793_OUT> in block <vga_display> are combined into a MAC<Maddsub_state_ryu[5]_PWR_2_o_MuLt_792_OUT>.
+	Multiplier <Mmult_n1774> in block <vga_display> and adder/subtractor <Madd_pixel_logo_addr> in block <vga_display> are combined into a MAC<Maddsub_n1774>.
+	Multiplier <Mmult_n1771> in block <vga_display> and adder/subtractor <Madd_pixel_ko_addr_Madd> in block <vga_display> are combined into a MAC<Maddsub_n1771>.
+Unit <vga_display> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# MACs                                                 : 4
+ 16x8-to-14-bit MAC                                    : 1
+ 16x9-to-16-bit MAC                                    : 1
+ 6x6-to-27-bit MAC                                     : 2
+# Multipliers                                          : 14
+ 27x11-bit multiplier                                  : 14
+# Adders/Subtractors                                   : 248
+ 10-bit subtractor                                     : 2
+ 11-bit adder                                          : 1
+ 11-bit subtractor                                     : 2
+ 12-bit adder                                          : 34
+ 12-bit subtractor                                     : 15
+ 16-bit adder                                          : 1
+ 17-bit subtractor                                     : 1
+ 22-bit adder                                          : 7
+ 25-bit adder                                          : 2
+ 25-bit subtractor                                     : 1
+ 27-bit adder                                          : 159
+ 27-bit subtractor                                     : 19
+ 6-bit adder                                           : 2
+ 9-bit subtractor                                      : 2
+# Counters                                             : 4
+ 11-bit up counter                                     : 2
+ 2-bit up counter                                      : 1
+ 24-bit up counter                                     : 1
+# Accumulators                                         : 3
+ 10-bit down loadable accumulator                      : 2
+ 16-bit down accumulator                               : 1
+# Registers                                            : 220
+ Flip-Flops                                            : 220
+# Comparators                                          : 104
+ 10-bit comparator greater                             : 4
+ 11-bit comparator greater                             : 11
+ 11-bit comparator lessequal                           : 18
+ 12-bit comparator greater                             : 8
+ 12-bit comparator lessequal                           : 29
+ 16-bit comparator lessequal                           : 3
+ 22-bit comparator lessequal                           : 7
+ 25-bit comparator greater                             : 2
+ 25-bit comparator lessequal                           : 10
+ 6-bit comparator greater                              : 1
+ 6-bit comparator lessequal                            : 11
+# Multiplexers                                         : 709
+ 1-bit 11-to-1 multiplexer                             : 27
+ 1-bit 13-to-1 multiplexer                             : 28
+ 1-bit 2-to-1 multiplexer                              : 317
+ 1-bit 3-to-1 multiplexer                              : 27
+ 1-bit 4-to-1 multiplexer                              : 1
+ 1-bit 5-to-1 multiplexer                              : 52
+ 1-bit 6-to-1 multiplexer                              : 78
+ 1-bit 7-to-1 multiplexer                              : 85
+ 1-bit 8-to-1 multiplexer                              : 1
+ 10-bit 2-to-1 multiplexer                             : 2
+ 11-bit 2-to-1 multiplexer                             : 2
+ 2-bit 2-to-1 multiplexer                              : 4
+ 22-bit 2-to-1 multiplexer                             : 14
+ 25-bit 2-to-1 multiplexer                             : 4
+ 26-bit 2-to-1 multiplexer                             : 2
+ 27-bit 2-to-1 multiplexer                             : 10
+ 27-bit 4-to-1 multiplexer                             : 3
+ 27-bit 7-to-1 multiplexer                             : 5
+ 27-bit 8-to-1 multiplexer                             : 1
+ 3-bit 2-to-1 multiplexer                              : 6
+ 6-bit 2-to-1 multiplexer                              : 30
+ 8-bit 2-to-1 multiplexer                              : 10
+# FSMs                                                 : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <R_bar_0> in Unit <vga_display> is equivalent to the following 2 FFs/Latches, which will be removed : <R_bar_1> <R_bar_2> 
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <vga/FSM_1> on signal <move_ryu[1:6]> with user encoding.
+--------------------
+ State  | Encoding
+--------------------
+ 000000 | 000000
+ 000001 | 000001
+ 000101 | 000101
+ 000010 | 000010
+ 000011 | 000011
+ 000100 | 000100
+ 000111 | 000111
+ 001010 | 001010
+ 001011 | 001011
+ 001000 | 001000
+ 001001 | 001001
+--------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <vga/FSM_0> on signal <move_ken[1:6]> with user encoding.
+--------------------
+ State  | Encoding
+--------------------
+ 000000 | 000000
+ 000001 | 000001
+ 000010 | 000010
+ 000101 | 000101
+ 000011 | 000011
+ 000100 | 000100
+ 000111 | 000111
+ 001010 | 001010
+ 001011 | 001011
+ 001000 | 001000
+ 001001 | 001001
+--------------------
+INFO:Xst:2146 - In block <vga_display>, Counter <count_8Hz> <count> are equivalent, XST will keep only <count_8Hz>.
+WARNING:Xst:1293 - FF/Latch <location_2_0> has a constant value of 0 in block <vga_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <location_1_0> has a constant value of 0 in block <vga_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <ryu_height_0> has a constant value of 0 in block <vga_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <ryu_height_1> has a constant value of 0 in block <vga_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <ryu_height_6> has a constant value of 0 in block <vga_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <ryu_height_7> has a constant value of 0 in block <vga_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <ken_height_0> has a constant value of 0 in block <vga_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <ken_height_6> has a constant value of 0 in block <vga_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <ken_height_7> has a constant value of 0 in block <vga_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <ryu_special_location_0> has a constant value of 0 in block <vga_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <pixel_addr_palyer_2_0> of sequential type is unconnected in block <vga_display>.
+INFO:Xst:2261 - The FF/Latch <ryu_height_3> in Unit <vga_display> is equivalent to the following FF/Latch, which will be removed : <ryu_height_5> 
+INFO:Xst:2261 - The FF/Latch <ken_height_2> in Unit <vga_display> is equivalent to the following FF/Latch, which will be removed : <ken_height_4> 
+INFO:Xst:2261 - The FF/Latch <ryu_height_2> in Unit <vga_display> is equivalent to the following FF/Latch, which will be removed : <ryu_height_4> 
+
+Optimizing unit <processor> ...
+
+Optimizing unit <vga_display> ...
+
+Optimizing unit <vga_controller_640_60> ...
+
+Optimizing unit <Debouncer> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block processor, actual ratio is 112.
+Optimizing block <processor> to meet ratio 100 (+ 5) of 2278 slices :
+WARNING:Xst:2254 - Area constraint could not be met for block <processor>, final ratio is 110.
+FlipFlop vga/location_1_1 has been replicated 2 time(s)
+FlipFlop vga/location_1_2 has been replicated 1 time(s)
+FlipFlop vga/location_1_3 has been replicated 1 time(s)
+FlipFlop vga/location_1_4 has been replicated 1 time(s)
+FlipFlop vga/location_1_5 has been replicated 2 time(s)
+FlipFlop vga/location_1_6 has been replicated 2 time(s)
+FlipFlop vga/location_1_7 has been replicated 2 time(s)
+FlipFlop vga/location_1_9 has been replicated 1 time(s)
+FlipFlop vga/move_ken_FSM_FFd3 has been replicated 1 time(s)
+FlipFlop vga/move_ken_FSM_FFd5 has been replicated 1 time(s)
+FlipFlop vga/move_ken_FSM_FFd6 has been replicated 1 time(s)
+FlipFlop vga/move_ryu_FSM_FFd3 has been replicated 1 time(s)
+FlipFlop vga/move_ryu_FSM_FFd5 has been replicated 1 time(s)
+FlipFlop vga/move_ryu_FSM_FFd6 has been replicated 1 time(s)
+FlipFlop vga/state_ken_0 has been replicated 1 time(s)
+FlipFlop vga/state_ken_1 has been replicated 2 time(s)
+FlipFlop vga/state_ken_2 has been replicated 2 time(s)
+FlipFlop vga/state_ryu_0 has been replicated 1 time(s)
+FlipFlop vga/state_ryu_2 has been replicated 1 time(s)
+FlipFlop vga/vc/hcounter_6 has been replicated 1 time(s)
+FlipFlop vga/vc/hcounter_7 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 322
+ Flip-Flops                                            : 322
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : processor.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 14312
+#      GND                         : 3
+#      INV                         : 284
+#      LUT1                        : 799
+#      LUT2                        : 2028
+#      LUT3                        : 2013
+#      LUT4                        : 808
+#      LUT5                        : 554
+#      LUT6                        : 1391
+#      MUXCY                       : 3300
+#      MUXF7                       : 36
+#      VCC                         : 3
+#      XORCY                       : 3093
+# FlipFlops/Latches                : 379
+#      FD                          : 63
+#      FDE                         : 26
+#      FDR                         : 192
+#      FDRE                        : 40
+#      FDSE                        : 4
+#      LD                          : 54
+# RAMS                             : 28
+#      RAMB16BWER                  : 28
+# Clock Buffers                    : 5
+#      BUFG                        : 4
+#      BUFGP                       : 1
+# IO Buffers                       : 68
+#      IBUF                        : 23
+#      OBUF                        : 45
+# DSPs                             : 30
+#      DSP48A1                     : 30
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             379  out of  18224     2%  
+ Number of Slice LUTs:                 7877  out of   9112    86%  
+    Number used as Logic:              7877  out of   9112    86%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   7908
+   Number with an unused Flip Flop:    7529  out of   7908    95%  
+   Number with an unused LUT:            31  out of   7908     0%  
+   Number of fully used LUT-FF pairs:   348  out of   7908     4%  
+   Number of unique control sets:        28
+
+IO Utilization: 
+ Number of IOs:                          78
+ Number of bonded IOBs:                  69  out of    232    29%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:               28  out of     32    87%  
+    Number using Block RAM only:         28
+ Number of BUFG/BUFGCTRLs:                5  out of     16    31%  
+ Number of DSP48A1s:                     30  out of     32    93%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+-------+
+Clock Signal                                                                       | Clock buffer(FF name)                                                                                                              | Load  |
+-----------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+-------+
+rst                                                                                | NONE(vga/Madd_n22491)                                                                                                              | 4     |
+vga/clk_8Hz                                                                        | BUFG                                                                                                                               | 94    |
+clk                                                                                | BUFGP                                                                                                                              | 233   |
+vga/move_ken[5]_PWR_20_o_Select_1586_o(vga/move_ken[5]_PWR_20_o_Select_1586_o4:O)  | BUFG(*)(vga/pixel_addr_palyer_1_2)                                                                                                 | 27    |
+vga/move_ryu[5]_PWR_343_o_Select_2214_o(vga/move_ryu[5]_PWR_343_o_Select_2214_o5:O)| BUFG(*)(vga/pixel_addr_palyer_2_1)                                                                                                 | 27    |
+debouncer_knock/clean                                                              | NONE(vga/start)                                                                                                                    | 1     |
+vga/clk_25Mhz                                                                      | BUFG                                                                                                                               | 27    |
+vga/ko/N1                                                                          | NONE(vga/ko/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/s6_init.ram/SP.SIMPLE_PRIM18.ram)   | 8     |
+vga/logo/N1                                                                        | NONE(vga/logo/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[19].ram.r/s6_init.ram/SP.SIMPLE_PRIM18.ram)| 20    |
+-----------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+-------+
+(*) These 2 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 5.664ns (Maximum Frequency: 176.552MHz)
+   Minimum input arrival time before clock: 3.590ns
+   Maximum output required time after clock: 22.479ns
+   Maximum combinational path delay: 10.167ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'vga/clk_8Hz'
+  Clock period: 5.664ns (frequency: 176.552MHz)
+  Total number of paths / destination ports: 9492 / 149
+-------------------------------------------------------------------------
+Delay:               5.664ns (Levels of Logic = 5)
+  Source:            vga/location_1_1_1 (FF)
+  Destination:       vga/location_1_10 (FF)
+  Source Clock:      vga/clk_8Hz rising
+  Destination Clock: vga/clk_8Hz rising
+
+  Data Path: vga/location_1_1_1 to vga/location_1_10
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             1   0.447   0.808  vga/location_1_1_1 (vga/location_1_1_1)
+     LUT3:I0->O           10   0.205   1.085  vga/Madd_n1802_cy<3>1 (vga/Madd_n1802_cy<3>)
+     LUT6:I3->O            5   0.205   0.943  vga/Madd_n1802_cy<10>11 (vga/Madd_n1802_cy<10>)
+     LUT3:I0->O            1   0.205   0.000  vga/Mcompar_BUS_0488_GND_2_o_LessThan_2716_o_lut<5> (vga/Mcompar_BUS_0488_GND_2_o_LessThan_2716_o_lut<5>)
+     MUXCY:S->O           20   0.366   1.093  vga/Mcompar_BUS_0488_GND_2_o_LessThan_2716_o_cy<5> (vga/Mcompar_BUS_0488_GND_2_o_LessThan_2716_o_cy<5>)
+     LUT4:I3->O            3   0.205   0.000  vga/Mmux__n874032 (vga/_n8740<1>)
+     FDRE:D                    0.102          vga/location_1_1
+    ----------------------------------------
+    Total                      5.664ns (1.735ns logic, 3.929ns route)
+                                       (30.6% logic, 69.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 5.269ns (frequency: 189.784MHz)
+  Total number of paths / destination ports: 8095 / 201
+-------------------------------------------------------------------------
+Delay:               5.269ns (Levels of Logic = 4)
+  Source:            vga/move_ken_FSM_FFd6 (FF)
+  Destination:       vga/move_ken_FSM_FFd5 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: vga/move_ken_FSM_FFd6 to vga/move_ken_FSM_FFd5
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q            219   0.447   2.059  vga/move_ken_FSM_FFd6 (vga/move_ken_FSM_FFd6)
+     LUT6:I5->O            1   0.205   0.684  vga/move_ken_FSM_FFd5-In3 (vga/move_ken_FSM_FFd5-In4)
+     LUT6:I4->O            1   0.203   0.580  vga/move_ken_FSM_FFd5-In5 (vga/move_ken_FSM_FFd5-In6)
+     LUT6:I5->O            1   0.205   0.580  vga/move_ken_FSM_FFd5-In6 (vga/move_ken_FSM_FFd5-In7)
+     LUT6:I5->O            2   0.205   0.000  vga/move_ken_FSM_FFd5-In7 (vga/move_ken_FSM_FFd5-In)
+     FDR:D                     0.102          vga/move_ken_FSM_FFd5
+    ----------------------------------------
+    Total                      5.269ns (1.367ns logic, 3.902ns route)
+                                       (25.9% logic, 74.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'vga/move_ryu[5]_PWR_343_o_Select_2214_o'
+  Clock period: 4.990ns (frequency: 200.415MHz)
+  Total number of paths / destination ports: 360 / 26
+-------------------------------------------------------------------------
+Delay:               4.990ns (Levels of Logic = 5)
+  Source:            vga/pixel_addr_palyer_2_4 (LATCH)
+  Destination:       vga/pixel_addr_palyer_2_4 (LATCH)
+  Source Clock:      vga/move_ryu[5]_PWR_343_o_Select_2214_o falling
+  Destination Clock: vga/move_ryu[5]_PWR_343_o_Select_2214_o falling
+
+  Data Path: vga/pixel_addr_palyer_2_4 to vga/pixel_addr_palyer_2_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               2   0.498   0.617  vga/pixel_addr_palyer_2_4 (vga/pixel_addr_palyer_2_4)
+     LUT5:I4->O           13   0.205   0.933  vga/mux101101 (vga/_n7618<22>)
+     LUT4:I3->O            2   0.205   0.617  vga/Mmux_state_ryu[5]_GND_2_o_select_1036_OUT1241111 (vga/Mmux_state_ryu[5]_GND_2_o_select_1036_OUT124111)
+     LUT6:I5->O            1   0.205   0.684  vga/Mmux_state_ryu[5]_GND_2_o_select_1036_OUT12963 (vga/state_ryu[5]_GND_2_o_select_1549_OUT<4>)
+     LUT6:I4->O            1   0.203   0.580  vga/Mmux_move_ryu[5]_GND_2_o_Select_2561_o_71 (vga/Mmux_move_ryu[5]_GND_2_o_Select_2561_o_71)
+     LUT6:I5->O            1   0.205   0.000  vga/move_ryu[3]241 (vga/move_ryu[5]_GND_2_o_Select_2561_o)
+     LD:D                      0.037          vga/pixel_addr_palyer_2_4
+    ----------------------------------------
+    Total                      4.990ns (1.558ns logic, 3.432ns route)
+                                       (31.2% logic, 68.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'debouncer_knock/clean'
+  Clock period: 4.024ns (frequency: 248.507MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               4.024ns (Levels of Logic = 1)
+  Source:            vga/start (FF)
+  Destination:       vga/start (FF)
+  Source Clock:      debouncer_knock/clean rising
+  Destination Clock: debouncer_knock/clean rising
+
+  Data Path: vga/start to vga/start
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              83   0.447   1.765  vga/start (vga/start)
+     INV:I->O             47   0.206   1.504  vga/start_inv1_INV_0 (vga/start_inv)
+     FD:D                      0.102          vga/start
+    ----------------------------------------
+    Total                      4.024ns (0.755ns logic, 3.269ns route)
+                                       (18.8% logic, 81.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'vga/clk_25Mhz'
+  Clock period: 5.181ns (frequency: 192.996MHz)
+  Total number of paths / destination ports: 571 / 40
+-------------------------------------------------------------------------
+Delay:               5.181ns (Levels of Logic = 2)
+  Source:            vga/vc/hcounter_8 (FF)
+  Destination:       vga/vc/hcounter_10 (FF)
+  Source Clock:      vga/clk_25Mhz rising
+  Destination Clock: vga/clk_25Mhz rising
+
+  Data Path: vga/vc/hcounter_8 to vga/vc/hcounter_10
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q            114   0.447   2.142  vga/vc/hcounter_8 (vga/vc/hcounter_8)
+     LUT6:I3->O            1   0.205   0.580  vga/vc/GND_61_o_GND_61_o_equal_4_o<10>_SW0 (N148)
+     LUT6:I5->O           24   0.205   1.172  vga/vc/GND_61_o_GND_61_o_equal_4_o<10> (vga/vc/GND_61_o_GND_61_o_equal_4_o)
+     FDR:R                     0.430          vga/vc/hcounter_0
+    ----------------------------------------
+    Total                      5.181ns (1.287ns logic, 3.894ns route)
+                                       (24.8% logic, 75.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 161 / 161
+-------------------------------------------------------------------------
+Offset:              3.590ns (Levels of Logic = 2)
+  Source:            knock_out (PAD)
+  Destination:       debouncer_knock/delay_count_21 (FF)
+  Destination Clock: clk rising
+
+  Data Path: knock_out to debouncer_knock/delay_count_21
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.579  knock_out_IBUF (knock_out_IBUF)
+     INV:I->O             23   0.206   1.153  debouncer_knock/button_inv1_INV_0 (debouncer_knock/button_inv)
+     FDR:R                     0.430          debouncer_knock/clean
+    ----------------------------------------
+    Total                      3.590ns (1.858ns logic, 1.732ns route)
+                                       (51.8% logic, 48.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'vga/move_ken[5]_PWR_20_o_Select_1586_o'
+  Total number of paths / destination ports: 70 / 34
+-------------------------------------------------------------------------
+Offset:              8.092ns (Levels of Logic = 4)
+  Source:            vga/player_1_region (LATCH)
+  Destination:       B<1> (PAD)
+  Source Clock:      vga/move_ken[5]_PWR_20_o_Select_1586_o falling
+
+  Data Path: vga/player_1_region to B<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q              27   0.498   1.585  vga/player_1_region (vga/player_1_region)
+     LUT6:I0->O           10   0.203   1.201  vga/player_1_region_pixel_val_8bit[7]_AND_1698_o6 (vga/player_1_region_pixel_val_8bit[7]_AND_1698_o)
+     LUT6:I1->O            8   0.203   1.050  vga/Mmux_B11111 (vga/Mmux_B111)
+     LUT6:I2->O            1   0.203   0.579  vga/Mmux_B21 (B_1_OBUF)
+     OBUF:I->O                 2.571          B_1_OBUF (B<1>)
+    ----------------------------------------
+    Total                      8.092ns (3.678ns logic, 4.414ns route)
+                                       (45.4% logic, 54.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'vga/move_ryu[5]_PWR_343_o_Select_2214_o'
+  Total number of paths / destination ports: 70 / 34
+-------------------------------------------------------------------------
+Offset:              8.072ns (Levels of Logic = 4)
+  Source:            vga/player_2_region (LATCH)
+  Destination:       B<1> (PAD)
+  Source Clock:      vga/move_ryu[5]_PWR_343_o_Select_2214_o falling
+
+  Data Path: vga/player_2_region to B<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q              27   0.498   1.565  vga/player_2_region (vga/player_2_region)
+     LUT6:I1->O           10   0.203   1.201  vga/player_1_region_pixel_val_8bit[7]_AND_1698_o6 (vga/player_1_region_pixel_val_8bit[7]_AND_1698_o)
+     LUT6:I1->O            8   0.203   1.050  vga/Mmux_B11111 (vga/Mmux_B111)
+     LUT6:I2->O            1   0.203   0.579  vga/Mmux_B21 (B_1_OBUF)
+     OBUF:I->O                 2.571          B_1_OBUF (B<1>)
+    ----------------------------------------
+    Total                      8.072ns (3.678ns logic, 4.394ns route)
+                                       (45.6% logic, 54.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'vga/clk_25Mhz'
+  Total number of paths / destination ports: 3340606 / 36
+-------------------------------------------------------------------------
+Offset:              22.479ns (Levels of Logic = 19)
+  Source:            vga/vc/vcounter_2 (FF)
+  Destination:       MemAdr<26> (PAD)
+  Source Clock:      vga/clk_25Mhz rising
+
+  Data Path: vga/vc/vcounter_2 to MemAdr<26>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q             114   0.447   2.142  vga/vc/vcounter_2 (vga/vc/vcounter_2)
+     LUT3:I0->O           18   0.205   1.278  vga/GND_2_o_vcount[10]_LessThan_56_o21 (vga/GND_2_o_vcount[10]_LessThan_56_o2)
+     LUT5:I2->O           24   0.205   1.537  vga/Msub_GND_2_o_GND_2_o_sub_7_OUT_xor<7>11 (vga/Madd_GND_2_o_GND_2_o_add_1275_OUT_lut<7>)
+     LUT6:I0->O            5   0.203   0.819  vga/Madd_GND_2_o_GND_2_o_add_8_OUT_cy<7>11 (vga/Madd_GND_2_o_GND_2_o_add_8_OUT_cy<7>)
+     LUT5:I3->O           15   0.203   0.981  vga/Madd_GND_2_o_GND_2_o_add_8_OUT_xor<12>11 (vga/GND_2_o_GND_2_o_add_8_OUT<12>)
+     DSP48A1:A12->P47     18   4.560   1.049  vga/Mmult_n1388 (vga/Mmult_n1388_P47_to_Mmult_n13881)
+     DSP48A1:C30->P0       3   2.687   0.651  vga/Mmult_n13881 (vga/n1388<17>)
+     LUT2:I1->O            1   0.205   0.580  vga/Madd_ryu_special_addr17 (vga/Madd_ryu_special_addr17)
+     LUT3:I2->O            1   0.205   0.000  vga/Madd_ryu_special_addr_lut<0>18 (vga/Madd_ryu_special_addr_lut<0>18)
+     MUXCY:S->O            1   0.172   0.000  vga/Madd_ryu_special_addr_cy<0>_17 (vga/Madd_ryu_special_addr_cy<0>18)
+     MUXCY:CI->O           1   0.019   0.000  vga/Madd_ryu_special_addr_cy<0>_18 (vga/Madd_ryu_special_addr_cy<0>19)
+     MUXCY:CI->O           1   0.019   0.000  vga/Madd_ryu_special_addr_cy<0>_19 (vga/Madd_ryu_special_addr_cy<0>20)
+     MUXCY:CI->O           1   0.019   0.000  vga/Madd_ryu_special_addr_cy<0>_20 (vga/Madd_ryu_special_addr_cy<0>21)
+     MUXCY:CI->O           1   0.019   0.000  vga/Madd_ryu_special_addr_cy<0>_21 (vga/Madd_ryu_special_addr_cy<0>22)
+     MUXCY:CI->O           1   0.019   0.000  vga/Madd_ryu_special_addr_cy<0>_22 (vga/Madd_ryu_special_addr_cy<0>23)
+     MUXCY:CI->O           1   0.019   0.000  vga/Madd_ryu_special_addr_cy<0>_23 (vga/Madd_ryu_special_addr_cy<0>24)
+     MUXCY:CI->O           0   0.019   0.000  vga/Madd_ryu_special_addr_cy<0>_24 (vga/Madd_ryu_special_addr_cy<0>25)
+     XORCY:CI->O           1   0.180   0.684  vga/Madd_ryu_special_addr_xor<0>_25 (vga/ryu_special_addr<26>)
+     LUT5:I3->O            1   0.203   0.579  vga/Mmux_ram_addr181 (ram_addr<25>)
+     OBUF:I->O                 2.571          MemAdr_26_OBUF (MemAdr<26>)
+    ----------------------------------------
+    Total                     22.479ns (12.179ns logic, 10.300ns route)
+                                       (54.2% logic, 45.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'vga/clk_8Hz'
+  Total number of paths / destination ports: 16126 / 34
+-------------------------------------------------------------------------
+Offset:              12.169ns (Levels of Logic = 9)
+  Source:            vga/health1_2 (FF)
+  Destination:       B<1> (PAD)
+  Source Clock:      vga/clk_8Hz rising
+
+  Data Path: vga/health1_2 to B<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              14   0.447   1.205  vga/health1_2 (vga/health1_2)
+     LUT6:I2->O            3   0.203   0.755  vga/Msub_GND_2_o_GND_2_o_add_19_OUT_cy<7>11 (vga/Msub_GND_2_o_GND_2_o_add_19_OUT_cy<7>)
+     LUT3:I1->O            2   0.203   0.864  vga/Msub_GND_2_o_GND_2_o_add_19_OUT_xor<9>11 (vga/GND_2_o_GND_2_o_add_19_OUT<9>)
+     LUT4:I0->O            0   0.203   0.000  vga/Mcompar_GND_2_o_hcount[10]_LessThan_21_o_lutdi4 (vga/Mcompar_GND_2_o_hcount[10]_LessThan_21_o_lutdi4)
+     MUXCY:DI->O           1   0.339   0.924  vga/Mcompar_GND_2_o_hcount[10]_LessThan_21_o_cy<4> (vga/Mcompar_GND_2_o_hcount[10]_LessThan_21_o_cy<4>)
+     LUT5:I0->O            2   0.203   0.845  vga/Mcompar_GND_2_o_hcount[10]_LessThan_21_o_cy<5> (vga/Mcompar_GND_2_o_hcount[10]_LessThan_21_o_cy<5>)
+     LUT5:I2->O            8   0.205   1.167  vga/bar1_bar2_OR_231_o7 (vga/bar1_bar2_OR_231_o)
+     LUT6:I0->O            8   0.203   1.050  vga/Mmux_B11111 (vga/Mmux_B111)
+     LUT6:I2->O            1   0.203   0.579  vga/Mmux_B21 (B_1_OBUF)
+     OBUF:I->O                 2.571          B_1_OBUF (B<1>)
+    ----------------------------------------
+    Total                     12.169ns (4.780ns logic, 7.389ns route)
+                                       (39.3% logic, 60.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'debouncer_knock/clean'
+  Total number of paths / destination ports: 16 / 8
+-------------------------------------------------------------------------
+Offset:              11.575ns (Levels of Logic = 7)
+  Source:            vga/start (FF)
+  Destination:       B<1> (PAD)
+  Source Clock:      debouncer_knock/clean rising
+
+  Data Path: vga/start to B<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              83   0.447   1.870  vga/start (vga/start)
+     LUT3:I1->O            1   0.203   0.924  vga/logo_region_start_AND_1699_o1 (vga/logo_region_start_AND_1699_o1)
+     LUT6:I1->O            1   0.203   0.924  vga/logo_region_start_AND_1699_o3 (vga/logo_region_start_AND_1699_o3)
+     LUT5:I0->O            8   0.203   1.167  vga/logo_region_start_AND_1699_o6 (vga/logo_region_start_AND_1699_o)
+     LUT6:I0->O            1   0.203   0.827  vga/Mmux_B1119 (vga/Mmux_B1119)
+     LUT6:I2->O            8   0.203   1.050  vga/Mmux_B11111 (vga/Mmux_B111)
+     LUT6:I2->O            1   0.203   0.579  vga/Mmux_B21 (B_1_OBUF)
+     OBUF:I->O                 2.571          B_1_OBUF (B<1>)
+    ----------------------------------------
+    Total                     11.575ns (4.236ns logic, 7.339ns route)
+                                       (36.6% logic, 63.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 134 / 8
+-------------------------------------------------------------------------
+Offset:              9.040ns (Levels of Logic = 6)
+  Source:            vga/clk_8Hz (FF)
+  Destination:       B<1> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: vga/clk_8Hz to B<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.447   0.684  vga/clk_8Hz (vga/clk_8Hz)
+     LUT3:I1->O            1   0.203   0.944  vga/Mmux_B1117 (vga/Mmux_B1117)
+     LUT6:I0->O            1   0.203   0.924  vga/Mmux_B1118 (vga/Mmux_B1118)
+     LUT6:I1->O            1   0.203   0.827  vga/Mmux_B1119 (vga/Mmux_B1119)
+     LUT6:I2->O            8   0.203   1.050  vga/Mmux_B11111 (vga/Mmux_B111)
+     LUT6:I2->O            1   0.203   0.579  vga/Mmux_B21 (B_1_OBUF)
+     OBUF:I->O                 2.571          B_1_OBUF (B<1>)
+    ----------------------------------------
+    Total                      9.040ns (4.033ns logic, 5.007ns route)
+                                       (44.6% logic, 55.4% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 284 / 9
+-------------------------------------------------------------------------
+Delay:               10.167ns (Levels of Logic = 7)
+  Source:            MemDB<7> (PAD)
+  Destination:       B<1> (PAD)
+
+  Data Path: MemDB<7> to B<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.222   0.864  MemDB_7_IBUF (MemDB_7_IBUF)
+     LUT4:I0->O            2   0.203   0.981  vga/Mmux_pixel_val_8bit81 (vga/pixel_val_8bit<7>)
+     LUT6:I0->O            1   0.203   0.684  vga/player_1_region_pixel_val_8bit[7]_AND_1698_o1 (vga/player_1_region_pixel_val_8bit[7]_AND_1698_o1)
+     LUT6:I4->O           10   0.203   1.201  vga/player_1_region_pixel_val_8bit[7]_AND_1698_o6 (vga/player_1_region_pixel_val_8bit[7]_AND_1698_o)
+     LUT6:I1->O            8   0.203   1.050  vga/Mmux_B11111 (vga/Mmux_B111)
+     LUT6:I2->O            1   0.203   0.579  vga/Mmux_B21 (B_1_OBUF)
+     OBUF:I->O                 2.571          B_1_OBUF (B<1>)
+    ----------------------------------------
+    Total                     10.167ns (4.808ns logic, 5.359ns route)
+                                       (47.3% logic, 52.7% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------------+---------+---------+---------+---------+
+                     | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock         |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------+---------+---------+---------+---------+
+clk                  |    5.269|         |         |         |
+debouncer_knock/clean|    5.318|         |         |         |
+vga/clk_25Mhz        |   12.107|         |         |         |
+vga/clk_8Hz          |    8.068|         |         |         |
+---------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock debouncer_knock/clean
+---------------------+---------+---------+---------+---------+
+                     | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock         |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------+---------+---------+---------+---------+
+debouncer_knock/clean|    4.024|         |         |         |
+---------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock rst
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+vga/clk_25Mhz  |   27.076|         |         |         |
+vga/clk_8Hz    |   12.845|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock vga/clk_25Mhz
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+vga/clk_25Mhz  |    5.181|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock vga/clk_8Hz
+---------------------+---------+---------+---------+---------+
+                     | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock         |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------+---------+---------+---------+---------+
+clk                  |    6.409|         |         |         |
+debouncer_knock/clean|    4.944|         |         |         |
+vga/clk_8Hz          |    5.664|         |         |         |
+---------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock vga/move_ken[5]_PWR_20_o_Select_1586_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    6.506|         |
+vga/clk_25Mhz  |         |         |   26.026|         |
+vga/clk_8Hz    |         |         |   19.234|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock vga/move_ryu[5]_PWR_343_o_Select_2214_o
+---------------------------------------+---------+---------+---------+---------+
+                                       | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                           |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------------------+---------+---------+---------+---------+
+clk                                    |         |         |    8.296|         |
+vga/clk_25Mhz                          |         |         |   35.208|         |
+vga/clk_8Hz                            |         |         |   21.429|         |
+vga/move_ryu[5]_PWR_343_o_Select_2214_o|         |         |    4.990|         |
+---------------------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 104.00 secs
+Total CPU time to Xst completion: 103.82 secs
+ 
+--> 
+
+Total memory usage is 390272 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  308 (   0 filtered)
+Number of infos    :   14 (   0 filtered)
+
